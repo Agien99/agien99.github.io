@@ -6,7 +6,7 @@ function Hero() {
       <div className="hero-container">
         <div className="hero-content">
           <p className="hero-intro">
-            Hi, I'm Eurgien.
+            Hi, I'm Eurgien Anak Anthony.
           </p>
 
           <h1 className="hero-title">
@@ -15,10 +15,10 @@ function Hero() {
           </h1>
 
           <p className="hero-description">
-            I build reliable web applications and enterprise systems
-            focused on solving real-world business problems through
-            maintainable software, structured workflows, and practical
-            system design.
+            I am a passionate and adaptable full-stack developer with hands-on experience in building modern web applications using Laravel, 
+            CodeIgniter 4 (CI4), and Python Flask, supported by MySQL, Docker, and Laragon for efficient development and deployment. I specialize 
+            in backend architecture, API integration, and system optimization, with a strong grasp of Git-based workflows and DevOps fundamentals. 
+            I also develop cross-platform mobile applications using Flutter and Dart, delivering clean, responsive, and maintainable solutions.
           </p>
 
           <div className="hero-actions">
