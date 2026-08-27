@@ -71,6 +71,7 @@
 
 .project-modal-close:hover {
   background: #161b22;
+
   border-color: #2f81f7;
 
   transform: rotate(4deg);
@@ -99,6 +100,37 @@
 
   object-fit: cover;
   object-position: top;
+}
+
+/* Mobile project hero */
+
+.project-modal-hero-mobile {
+  height: 430px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(47, 129, 247, 0.12),
+      transparent 45%
+    ),
+    #0a0e13;
+}
+
+.project-modal-hero-mobile img {
+  width: auto;
+  max-width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  border-radius: 14px;
 }
 
 /* =========================
@@ -171,6 +203,16 @@
 
   border-radius: 50%;
 
+  background: #d29922;
+}
+
+.project-modal-status-completed
+.project-modal-status-dot {
+  background: #3fb950;
+}
+
+.project-modal-status-development
+.project-modal-status-dot {
   background: #d29922;
 }
 
@@ -345,14 +387,16 @@
 .workflow-arrow {
   position: absolute;
 
-  right: -17px;
+  right: -19px;
   top: 50%;
 
-  transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%);
 
   color: #484f58;
 
   font-size: 1rem;
+
+  z-index: 2;
 }
 
 /* =========================
@@ -377,16 +421,25 @@
   border-radius: 12px;
 }
 
-.project-screenshot img {
+.project-screenshot-image {
   width: 100%;
+
+  overflow: hidden;
+
+  background: #0d1117;
+
+  border-bottom: 1px solid #30363d;
+}
+
+.project-screenshot-image img {
+  width: 100%;
+
   aspect-ratio: 16 / 9;
 
   display: block;
 
   object-fit: cover;
   object-position: top;
-
-  border-bottom: 1px solid #30363d;
 }
 
 .project-screenshot p {
@@ -398,6 +451,47 @@
 
   font-size: 0.85rem;
   font-weight: 600;
+}
+
+/* =========================
+   MOBILE PROJECT SCREENSHOTS
+========================= */
+
+.project-screenshot-grid-mobile {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.project-screenshot-mobile {
+  width: 100%;
+  max-width: 280px;
+
+  justify-self: center;
+}
+
+.project-screenshot-mobile
+.project-screenshot-image {
+  padding: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #0a0e13;
+}
+
+.project-screenshot-mobile
+.project-screenshot-image img {
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: auto;
+
+  object-fit: contain;
+
+  border-radius: 9px;
 }
 
 /* =========================
@@ -466,6 +560,10 @@
   font-weight: 700;
 }
 
+.project-status-text-completed {
+  color: #3fb950 !important;
+}
+
 /* =========================
    ACTIONS
 ========================= */
@@ -523,6 +621,10 @@
     height: 330px;
   }
 
+  .project-modal-hero-mobile {
+    height: 380px;
+  }
+
   .project-workflow {
     display: grid;
 
@@ -532,6 +634,11 @@
 
   .workflow-arrow {
     display: none;
+  }
+
+  .project-screenshot-grid-mobile {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
 }
@@ -551,12 +658,19 @@
     max-height: 100vh;
 
     border-radius: 0;
+
     border-left: none;
     border-right: none;
   }
 
   .project-modal-hero {
     height: 240px;
+  }
+
+  .project-modal-hero-mobile {
+    height: 360px;
+
+    padding: 22px;
   }
 
   .project-modal-content {
@@ -573,9 +687,14 @@
 
   .project-feature-grid,
   .project-screenshot-grid,
+  .project-screenshot-grid-mobile,
   .project-highlight-list,
   .project-workflow {
     grid-template-columns: 1fr;
+  }
+
+  .project-screenshot-mobile {
+    max-width: 300px;
   }
 
 }

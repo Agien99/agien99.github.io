@@ -156,19 +156,110 @@ const projects = [
     type: 'mobile',
     category: 'Mobile Application',
     status: 'Completed',
-
+  
     description:
-        'A cross-platform educational mobile application developed using Flutter, designed to support history learning through a structured and accessible digital experience.',
-
+      'A cross-platform educational mobile application developed using Flutter, designed to support history learning through structured notes, quizzes, progress tracking, and revision activities.',
+  
     images: [
-        '/images/projects/project_3/overview_1.jpg',
-        '/images/projects/project_3/overview_2.jpg',
+      '/images/projects/project_3/overview_1.jpg',
+      '/images/projects/project_3/overview_2.jpg',
     ],
-
+  
     technologies: [
-        'Flutter',
-        'Dart',
+      'Flutter',
+      'Dart',
     ],
+  
+    detailImage:
+      '/images/projects/project_3/detail_main.jpg',
+  
+    overview:
+      'Notaku Sejarah is an educational mobile application designed to support secondary school history learning through digital notes, chapter-based quizzes, quiz records, and result tracking. The application provides students with a structured way to review learning materials and test their understanding of selected topics.',
+  
+    role:
+      'Mobile Application Developer',
+  
+    features: [
+      'History notes by form and chapter',
+      'Chapter-based quizzes',
+      'Multiple-choice quiz questions',
+      'Quiz result tracking',
+      'Quiz attempt history',
+      'Structured revision content',
+      'Credits and application information',
+    ],
+  
+    fullTechnologies: [
+      'Flutter',
+      'Dart',
+    ],
+  
+    workflow: [
+      'Select learning section',
+      'Choose form / chapter',
+      'Read notes or start quiz',
+      'Answer quiz questions',
+      'Submit quiz',
+      'View result',
+      'Review quiz history',
+    ],
+  
+    screenshots: [
+      {
+        image:
+          '/images/projects/project_3/screenshots/nota.jpg',
+        label:
+          'Nota Tab',
+      },
+      {
+        image:
+          '/images/projects/project_3/screenshots/kuiz.jpg',
+        label:
+          'Kuiz Tab',
+      },
+      {
+        image:
+          '/images/projects/project_3/screenshots/kredit.jpg',
+        label:
+          'Kredit Tab',
+      },
+      {
+        image:
+          '/images/projects/project_3/screenshots/question.jpg',
+        label:
+          'Chapter Quiz Question',
+      },
+      {
+        image:
+          '/images/projects/project_3/screenshots/quiz-history.jpg',
+        label:
+          'Quiz History',
+      },
+      {
+        image:
+          '/images/projects/project_3/screenshots/quiz-result.jpg',
+        label:
+          'Quiz Result',
+      },
+      {
+        image:
+          '/images/projects/project_3/screenshots/note-sample.jpg',
+        label:
+          'Tingkatan 1 Note Sample',
+      },
+    ],
+  
+    highlights: [
+      'Cross-platform application built using Flutter',
+      'Structured separation between notes and quizzes',
+      'Chapter-based learning flow',
+      'Quiz result tracking',
+      'Quiz attempt history',
+      'Reusable Flutter screen structure',
+    ],
+  
+    github:
+      'https://github.com/Agien99/Notaku_Sejarah',
   },
 
 //   {
@@ -382,10 +473,10 @@ function Projects() {
 
       </div>
 
-      {selectedProject && selectedProject.id === 1 && (
+      {selectedProject && (
         <ProjectModal
-          project={selectedProject}
-          onClose={() => setSelectedProject(null)}
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
         />
       )}
 
