@@ -15,10 +15,9 @@ function Hero() {
           </h1>
 
           <p className="hero-description">
-            I am a passionate and adaptable full-stack developer with hands-on experience in building modern web applications using Laravel, 
-            CodeIgniter 4 (CI4), and Python Flask, supported by MySQL, Docker, and Laragon for efficient development and deployment. I specialize 
-            in backend architecture, API integration, and system optimization, with a strong grasp of Git-based workflows and DevOps fundamentals. 
-            I also develop cross-platform mobile applications using Flutter and Dart, delivering clean, responsive, and maintainable solutions.
+            I build reliable web applications and enterprise systems, 
+            with experience across full-stack development, backend architecture, 
+            databases, APIs, and modern development workflows.
           </p>
 
           <div className="hero-actions">
