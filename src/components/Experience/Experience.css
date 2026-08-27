@@ -1,0 +1,338 @@
+.experience {
+  padding: 120px 0;
+  background: #0b0f14;
+}
+
+.experience-container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.experience-heading {
+  max-width: 850px;
+  margin-bottom: 70px;
+}
+
+.experience-heading h2 {
+  margin: 0;
+
+  color: #f0f6fc;
+
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.experience-heading h2 span {
+  color: #8b949e;
+}
+
+.experience-intro {
+  max-width: 720px;
+
+  margin-top: 24px;
+
+  color: #8b949e;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.experience-timeline {
+  position: relative;
+}
+
+/* Vertical line */
+
+.experience-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 220px;
+
+  width: 1px;
+
+  background: #30363d;
+}
+
+/* =========================
+   EXPERIENCE ITEM
+========================= */
+
+.experience-item {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 190px 1fr;
+
+  gap: 60px;
+
+  margin-bottom: 60px;
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   DATE
+========================= */
+
+.experience-date {
+  padding-top: 25px;
+
+  color: #8b949e;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* =========================
+   TIMELINE MARKER
+========================= */
+
+.timeline-marker {
+  position: absolute;
+
+  left: 211px;
+  top: 30px;
+
+  width: 19px;
+  height: 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0b0f14;
+
+  border: 2px solid #2f81f7;
+
+  z-index: 2;
+}
+
+.timeline-marker span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #2f81f7;
+}
+
+/* =========================
+   EXPERIENCE CARD
+========================= */
+
+.experience-card {
+  padding: 32px;
+
+  background: #161b22;
+
+  border: 1px solid #30363d;
+
+  border-radius: 16px;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  border-color: #2f81f7;
+}
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.experience-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 30px;
+
+  margin-bottom: 20px;
+}
+
+.experience-card h3 {
+  margin: 0 0 8px;
+
+  color: #f0f6fc;
+
+  font-size: 1.4rem;
+}
+
+.experience-company {
+  margin: 0;
+
+  color: #2f81f7;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.experience-type {
+  flex-shrink: 0;
+
+  padding: 7px 12px;
+
+  border: 1px solid #30363d;
+  border-radius: 20px;
+
+  color: #8b949e;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  background: #0d1117;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.experience-description {
+  margin-bottom: 22px;
+
+  color: #c9d1d9;
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* =========================
+   RESPONSIBILITIES
+========================= */
+
+.experience-responsibilities {
+  margin: 0 0 26px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.experience-responsibilities li {
+  position: relative;
+
+  margin-bottom: 10px;
+  padding-left: 22px;
+
+  color: #8b949e;
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.experience-responsibilities li::before {
+  content: "▹";
+
+  position: absolute;
+  left: 0;
+
+  color: #2f81f7;
+}
+
+.experience-responsibilities li:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   TECHNOLOGY TAGS
+========================= */
+
+.experience-technologies {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.experience-technologies span {
+  padding: 7px 11px;
+
+  border-radius: 6px;
+
+  background: rgba(47, 129, 247, 0.1);
+
+  color: #79c0ff;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+  .experience-timeline::before {
+    left: 8px;
+  }
+
+  .experience-item {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    padding-left: 40px;
+  }
+
+  .timeline-marker {
+    left: 0;
+    top: 5px;
+  }
+
+  .experience-date {
+    padding-top: 0;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .experience {
+    padding: 90px 0;
+  }
+
+  .experience-heading {
+    margin-bottom: 50px;
+  }
+
+  .experience-card {
+    padding: 24px;
+  }
+
+  .experience-card-header {
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .experience-card h3 {
+    font-size: 1.2rem;
+  }
+
+}
