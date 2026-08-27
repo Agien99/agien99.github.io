@@ -7,16 +7,19 @@ const projects = [
     type: 'mixed',
     category: 'Freelance Project',
     status: 'In Development',
+
     description:
-      'A cafe point-of-sale and ordering system designed to manage dine-in and online orders, kitchen preparation workflows, menu management, order status tracking, and audit logs.',
+        'An integrated cafe POS and ordering system that connects counter sales, customer ordering, payment processing, kitchen operations, inventory, loyalty, reporting, and audit tracking within a single platform.',
+
     images: [
-      '/images/projects/project_1/overview_1.jpg',
-      '/images/projects/project_1/overview_2.jpg',
+        '/images/projects/project_1/overview_1.jpg',
+        '/images/projects/project_1/overview_2.jpg',
     ],
+
     technologies: [
-      'Laravel',
-      'MySQL',
-      'JavaScript',
+        'Laravel',
+        'MySQL',
+        'JavaScript',
     ],
   },
 
