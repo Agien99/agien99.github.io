@@ -1,0 +1,151 @@
+.about {
+  padding: 120px 0;
+  background: #0d1117;
+}
+
+.about-container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
+
+.about-heading {
+  max-width: 850px;
+  margin-bottom: 64px;
+}
+
+.section-label {
+  margin-bottom: 14px;
+
+  color: #2f81f7;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.about-heading h2 {
+  margin: 0;
+
+  color: #f0f6fc;
+
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.about-heading h2 span {
+  color: #8b949e;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.about-text {
+  position: sticky;
+  top: 120px;
+}
+
+.about-text p {
+  margin-bottom: 24px;
+
+  color: #8b949e;
+
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.about-text p:first-child {
+  color: #c9d1d9;
+  font-size: 1.15rem;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.about-card {
+  min-height: 220px;
+  padding: 28px;
+
+  background: #161b22;
+
+  border: 1px solid #30363d;
+  border-radius: 14px;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  border-color: #2f81f7;
+  background: #18202a;
+}
+
+.about-card-number {
+  display: inline-block;
+
+  margin-bottom: 30px;
+
+  color: #2f81f7;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.about-card h3 {
+  margin-bottom: 12px;
+
+  color: #f0f6fc;
+
+  font-size: 1.15rem;
+}
+
+.about-card p {
+  margin: 0;
+
+  color: #8b949e;
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 950px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-text {
+    position: static;
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 650px) {
+  .about {
+    padding: 90px 0;
+  }
+
+  .about-heading {
+    margin-bottom: 45px;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card {
+    min-height: auto;
+  }
+}
