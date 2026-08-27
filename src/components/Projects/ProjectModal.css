@@ -1,0 +1,581 @@
+.project-modal-backdrop {
+  position: fixed;
+  inset: 0;
+
+  z-index: 5000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(0, 0, 0, 0.8);
+
+  backdrop-filter: blur(8px);
+}
+
+.project-modal {
+  position: relative;
+
+  width: min(1100px, 100%);
+  max-height: 92vh;
+
+  overflow-y: auto;
+
+  background: #0d1117;
+
+  border: 1px solid #30363d;
+  border-radius: 18px;
+
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.55);
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.project-modal-close {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  z-index: 10;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #30363d;
+  border-radius: 50%;
+
+  background: rgba(13, 17, 23, 0.9);
+
+  color: #f0f6fc;
+
+  font-size: 1.6rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.project-modal-close:hover {
+  background: #161b22;
+  border-color: #2f81f7;
+
+  transform: rotate(4deg);
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.project-modal-hero {
+  width: 100%;
+  height: 430px;
+
+  overflow: hidden;
+
+  background: #161b22;
+
+  border-bottom: 1px solid #30363d;
+}
+
+.project-modal-hero img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: top;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.project-modal-content {
+  padding: 45px;
+}
+
+.project-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 50px;
+}
+
+.project-modal-category {
+  margin: 0 0 10px;
+
+  color: #2f81f7;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.project-modal-header h2 {
+  margin: 0;
+
+  color: #f0f6fc;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.project-modal-status {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+
+  padding: 9px 14px;
+
+  background: #161b22;
+
+  border: 1px solid #30363d;
+  border-radius: 30px;
+
+  color: #c9d1d9;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.project-modal-status-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #d29922;
+}
+
+/* =========================
+   DETAIL SECTION
+========================= */
+
+.project-detail-section {
+  margin-bottom: 55px;
+}
+
+.project-detail-section:last-of-type {
+  margin-bottom: 35px;
+}
+
+.project-detail-section h3 {
+  margin: 0 0 20px;
+
+  color: #f0f6fc;
+
+  font-size: 1.25rem;
+}
+
+.project-detail-section > p {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #8b949e;
+
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.project-role {
+  color: #c9d1d9 !important;
+
+  font-size: 1.1rem !important;
+  font-weight: 600;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.project-feature-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.project-feature-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 16px;
+
+  background: #161b22;
+
+  border: 1px solid #30363d;
+  border-radius: 10px;
+}
+
+.project-feature-item span {
+  color: #3fb950;
+
+  font-weight: 700;
+}
+
+.project-feature-item p {
+  margin: 0;
+
+  color: #c9d1d9;
+
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* =========================
+   TECHNOLOGIES
+========================= */
+
+.project-modal-technologies {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.project-modal-technologies span {
+  padding: 9px 13px;
+
+  background: rgba(47, 129, 247, 0.1);
+
+  border: 1px solid rgba(47, 129, 247, 0.2);
+  border-radius: 7px;
+
+  color: #79c0ff;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* =========================
+   WORKFLOW
+========================= */
+
+.project-workflow {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+.workflow-step {
+  position: relative;
+
+  flex: 1;
+
+  min-height: 130px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px;
+
+  text-align: center;
+
+  background: #161b22;
+
+  border: 1px solid #30363d;
+  border-radius: 10px;
+}
+
+.workflow-number {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12px;
+
+  border-radius: 50%;
+
+  background: rgba(47, 129, 247, 0.15);
+
+  color: #79c0ff;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.workflow-step p {
+  margin: 0;
+
+  color: #c9d1d9;
+
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.workflow-arrow {
+  position: absolute;
+
+  right: -17px;
+  top: 50%;
+
+  transform: translateY(-50%) rotate(-90deg);
+
+  color: #484f58;
+
+  font-size: 1rem;
+}
+
+/* =========================
+   SCREENSHOTS
+========================= */
+
+.project-screenshot-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.project-screenshot {
+  overflow: hidden;
+
+  background: #161b22;
+
+  border: 1px solid #30363d;
+  border-radius: 12px;
+}
+
+.project-screenshot img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: top;
+
+  border-bottom: 1px solid #30363d;
+}
+
+.project-screenshot p {
+  margin: 0;
+
+  padding: 13px 16px;
+
+  color: #c9d1d9;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* =========================
+   TECHNICAL HIGHLIGHTS
+========================= */
+
+.project-highlight-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px 25px;
+}
+
+.project-highlight-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+}
+
+.project-highlight-item span {
+  color: #2f81f7;
+
+  font-weight: 700;
+}
+
+.project-highlight-item p {
+  margin: 0;
+
+  color: #8b949e;
+
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   ERD
+========================= */
+
+.project-erd {
+  overflow: hidden;
+
+  background: #161b22;
+
+  border: 1px solid #30363d;
+  border-radius: 12px;
+}
+
+.project-erd img {
+  width: 100%;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+/* =========================
+   STATUS TEXT
+========================= */
+
+.project-status-text {
+  color: #d29922 !important;
+
+  font-weight: 700;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.project-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid #30363d;
+}
+
+.project-modal-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+
+  padding: 0 20px;
+
+  background: #2f81f7;
+
+  border: 1px solid #2f81f7;
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.project-modal-button:hover {
+  background: #1f6feb;
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .project-modal-hero {
+    height: 330px;
+  }
+
+  .project-workflow {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .workflow-arrow {
+    display: none;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .project-modal-backdrop {
+    padding: 0;
+  }
+
+  .project-modal {
+    width: 100%;
+    max-height: 100vh;
+
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .project-modal-hero {
+    height: 240px;
+  }
+
+  .project-modal-content {
+    padding: 28px 22px;
+  }
+
+  .project-modal-header {
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin-bottom: 40px;
+  }
+
+  .project-feature-grid,
+  .project-screenshot-grid,
+  .project-highlight-list,
+  .project-workflow {
+    grid-template-columns: 1fr;
+  }
+
+}

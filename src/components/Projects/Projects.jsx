@@ -1,26 +1,131 @@
+import { useState } from 'react';
 import './Projects.css';
+import ProjectModal from './ProjectModal';
 
 const projects = [
   {
-    id: 1,
-    title: 'Wellness Cafe Point of Sale System',
-    type: 'mixed',
-    category: 'Freelance Project',
-    status: 'In Development',
+  id: 1,
+  title: 'Wellness Cafe Point of Sale System',
+  type: 'mixed',
+  category: 'Freelance · Full-Stack',
+  status: 'In Development',
 
-    description:
-        'An integrated cafe POS and ordering system that connects counter sales, customer ordering, payment processing, kitchen operations, inventory, loyalty, reporting, and audit tracking within a single platform.',
+  description:
+    'An integrated cafe POS and ordering system that connects counter sales, customer ordering, payment processing, kitchen operations, inventory, loyalty, reporting, and audit tracking within a single platform.',
 
-    images: [
-        '/images/projects/project_1/overview_1.jpg',
-        '/images/projects/project_1/overview_2.jpg',
-    ],
+  images: [
+    '/images/projects/project_1/overview_1.jpg',
+    '/images/projects/project_1/overview_2.jpg',
+  ],
 
-    technologies: [
-        'Laravel',
-        'MySQL',
-        'JavaScript',
-    ],
+  technologies: [
+    'Laravel',
+    'MySQL',
+    'JavaScript',
+  ],
+
+  detailImage:
+    '/images/projects/project_1/detail_main.jpg',
+
+  overview:
+    'An integrated cafe point-of-sale and ordering platform designed to connect counter sales, customer QR ordering, kitchen preparation, payment processing, inventory management, loyalty, reporting, and audit tracking within a single system.',
+
+  role:
+    'Full-Stack Developer',
+
+  features: [
+    'POS counter ordering',
+    'Customer QR ordering',
+    'Kitchen Display System',
+    'Customer order-status tracking',
+    'Product and category management',
+    'Table management',
+    'Inventory auto-deduction',
+    'Purchase order management',
+    'Customer and loyalty management',
+    'Payment handling',
+    'Refund workflow',
+    'Reporting and analytics',
+    'Audit logging',
+  ],
+
+  fullTechnologies: [
+    'Laravel 13',
+    'PHP',
+    'MySQL',
+    'JavaScript',
+    'HTML',
+    'CSS',
+    'Laravel Sanctum',
+    'Chart.js',
+  ],
+
+  workflow: [
+    'Customer places order',
+    'Pending payment',
+    'Payment confirmed',
+    'Kitchen queue',
+    'Preparing',
+    'Ready',
+    'Completed',
+  ],
+
+  screenshots: [
+    {
+      image:
+        '/images/projects/project_1/screenshots/pos.jpg',
+      label:
+        'Point of Sale',
+    },
+    {
+      image:
+        '/images/projects/project_1/screenshots/ordering.jpg',
+      label:
+        'Customer Ordering',
+    },
+    {
+      image:
+        '/images/projects/project_1/screenshots/kitchen.jpg',
+      label:
+        'Kitchen Display',
+    },
+    {
+      image:
+        '/images/projects/project_1/screenshots/order-status.jpg',
+      label:
+        'Order Status Tracking',
+    },
+    {
+      image:
+        '/images/projects/project_1/screenshots/inventory.jpg',
+      label:
+        'Inventory Management',
+    },
+    {
+      image:
+        '/images/projects/project_1/screenshots/reporting.jpg',
+      label:
+        'Reporting & Analytics',
+    },
+  ],
+
+  highlights: [
+    'Role-based staff access',
+    'Separate payment and kitchen states',
+    'Payment-first kitchen workflow',
+    'Atomic inventory deduction',
+    'Live kitchen refresh',
+    'Customer order-status polling',
+    'Loyalty tier automation',
+    'Soft delete support',
+    'Audit trail for write operations',
+  ],
+
+//   erd:
+//     '/images/projects/project_1/erd.jpg',
+
+//   github:
+//     'https://github.com/Agien99/wellness-cafe-api',
   },
 
   {
@@ -87,6 +192,7 @@ const projects = [
 ];
 
 function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null);
   return (
     <section id="projects" className="projects">
       <div className="projects-container">
@@ -119,6 +225,14 @@ function Projects() {
 
               <div
                 className={`project-preview project-preview-${project.type}`}
+                onClick={() => setSelectedProject(project)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                    setSelectedProject(project);
+                    }
+                }}
               >
 
                 {/* =========================
@@ -253,7 +367,8 @@ function Projects() {
                 <button
                   type="button"
                   className="project-explore"
-                >
+                  onClick={() => setSelectedProject(project)}
+                  >
                   Explore Project
                   <span>→</span>
                 </button>
@@ -266,6 +381,14 @@ function Projects() {
         </div>
 
       </div>
+
+      {selectedProject && selectedProject.id === 1 && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
+
     </section>
   );
 }
