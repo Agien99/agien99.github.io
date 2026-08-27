@@ -5,7 +5,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <a href="#home" className="navbar-logo">
-          EURGIEN
+          EURGIEN ANAK ANTHONY
         </a>
 
         <div className="navbar-links">
