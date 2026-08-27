@@ -1,0 +1,226 @@
+.contact {
+  padding: 120px 0;
+  background: #0d1117;
+}
+
+.contact-container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.contact-heading {
+  max-width: 850px;
+  margin-bottom: 65px;
+}
+
+.contact-heading h2 {
+  margin: 0;
+
+  color: #f0f6fc;
+
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.contact-heading h2 span {
+  color: #8b949e;
+}
+
+.contact-intro {
+  max-width: 720px;
+
+  margin-top: 24px;
+
+  color: #8b949e;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   CONTACT GRID
+========================= */
+
+.contact-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+
+  margin-bottom: 50px;
+}
+
+/* =========================
+   CONTACT CARD
+========================= */
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 260px;
+
+  padding: 30px;
+
+  background: #161b22;
+
+  border: 1px solid #30363d;
+  border-radius: 16px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #2f81f7;
+
+  background: #18202a;
+}
+
+.contact-card-label {
+  margin-bottom: 24px;
+
+  color: #2f81f7;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.contact-card h3 {
+  margin: 0 0 16px;
+
+  color: #f0f6fc;
+
+  font-size: 1.2rem;
+  word-break: break-word;
+}
+
+.contact-card p {
+  margin: 0;
+
+  color: #8b949e;
+
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.contact-link {
+  display: inline-block;
+
+  margin-top: auto;
+  padding-top: 28px;
+
+  color: #79c0ff;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* =========================
+   BOTTOM INFORMATION
+========================= */
+
+.contact-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding-top: 35px;
+
+  border-top: 1px solid #30363d;
+}
+
+.contact-bottom > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.contact-bottom-label {
+  color: #8b949e;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.contact-bottom p,
+.contact-bottom a {
+  margin: 0;
+
+  color: #c9d1d9;
+
+  font-size: 0.95rem;
+}
+
+.contact-bottom a {
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.contact-bottom a:hover {
+  color: #2f81f7;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    min-height: 220px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .contact {
+    padding: 90px 0;
+  }
+
+  .contact-heading {
+    margin-bottom: 45px;
+  }
+
+  .contact-card {
+    min-height: auto;
+
+    padding: 24px;
+  }
+
+  .contact-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
