@@ -38,59 +38,12 @@ function Hero() {
         </div>
 
         <div className="hero-visual">
-          <div className="hero-code-card">
-            <div className="code-card-header">
-              <span />
-              <span />
-              <span />
-            </div>
-
-            <div className="code-card-body">
-              <p>
-                <span className="code-keyword">const</span>{' '}
-                <span className="code-variable">developer</span> = {'{'}
-              </p>
-
-              <p className="code-indent">
-                name:{' '}
-                <span className="code-string">"Eurgien"</span>,
-              </p>
-
-              <p className="code-indent">
-                role:{' '}
-                <span className="code-string">
-                  "Software Engineer"
-                </span>,
-              </p>
-
-              <p className="code-indent">
-                focus: [
-              </p>
-
-              <p className="code-double-indent">
-                <span className="code-string">
-                  "Full-Stack Development"
-                </span>,
-              </p>
-
-              <p className="code-double-indent">
-                <span className="code-string">
-                  "Enterprise Applications"
-                </span>,
-              </p>
-
-              <p className="code-double-indent">
-                <span className="code-string">
-                  "System Design"
-                </span>
-              </p>
-
-              <p className="code-indent">
-                ]
-              </p>
-
-              <p>{'}'};</p>
-            </div>
+          <div className="profile-image-container">
+            <img
+              src="/images/profile/eurgien-profile.PNG"
+              alt="Eurgien Anak Anthony"
+              className="profile-image"
+            />
           </div>
         </div>
       </div>
