@@ -27,7 +27,7 @@ function Hero() {
             </a>
 
             <a
-              href="/resume.pdf"
+              href="/resume/resume.pdf"
               className="hero-button hero-button-secondary"
               target="_blank"
               rel="noreferrer"
