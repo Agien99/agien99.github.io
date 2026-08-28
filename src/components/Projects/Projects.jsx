@@ -207,8 +207,8 @@ const projects = [
       'Developed as part of the PuLaMi system environment',
     ],
 
-    github:
-      'https://github.com/Agien99/pulami_institute_profiling',
+//    github:
+//      'https://github.com/Agien99/pulami_institute_profiling',
 
     liveDemo:
       'https://profiling.upsi.edu.my',
@@ -322,8 +322,8 @@ const projects = [
       'Reusable Flutter screen structure',
     ],
   
-    github:
-      'https://github.com/Agien99/Notaku_Sejarah',
+//    github:
+//      'https://github.com/Agien99/Notaku_Sejarah',
   },
 
 //   {
