@@ -133,21 +133,85 @@ const projects = [
     title: 'PuLaMi Institute Profiling System',
     type: 'web',
     category: 'Professional / University Project',
-    status: 'Completed',
+    status: 'Live',
 
     description:
-        'An institute profiling module developed to help students discover and review companies and schools for teaching and industrial training placements, with an emphasis on clear and accessible information presentation.',
+      'An institute profiling module developed to help students discover and review companies and schools for teaching and industrial training placements through a clean and accessible web interface.',
 
     images: [
-        '/images/projects/project_2/overview_1.jpg',
-        '/images/projects/project_2/overview_2.jpg',
+      '/images/projects/project_2/overview_1.jpg',
+      '/images/projects/project_2/overview_2.jpg',
     ],
 
     technologies: [
-        'CodeIgniter 4',
-        'PHP',
-        'PostgreSQL',
+      'CodeIgniter 4',
+      'PHP',
+      'PostgreSQL',
     ],
+
+    detailImage:
+      '/images/projects/project_2/detail_main.jpg',
+
+    overview:
+      'The PuLaMi Institute Profiling System is a web-based institute profiling module developed to help students explore companies and schools available for teaching and industrial training placements. The module focuses on presenting institutional information in a clear, structured, and user-friendly way to support students during placement research and decision-making.',
+
+    role:
+      'Backend / Full-Stack Developer',
+
+    features: [
+      'Institute and organisation profiling',
+      'Teaching training placement information',
+      'Industrial training placement information',
+      'Institution detail pages',
+      'Structured institute information presentation',
+      'Student-friendly browsing experience',
+    ],
+
+    fullTechnologies: [
+      'CodeIgniter 4',
+      'PHP',
+      'PostgreSQL',
+      'HTML',
+      'CSS',
+      'JavaScript',
+    ],
+
+    workflow: [
+      'Browse institute profiles',
+      'Select training category',
+      'Explore available institutions',
+      'Open institution profile',
+      'Review placement information',
+    ],
+
+    screenshots: [
+      {
+        image:
+          '/images/projects/project_2/screenshots/latihan-mengajar.jpg',
+        label:
+          'Teaching Training Listing',
+      },
+      {
+        image:
+          '/images/projects/project_2/screenshots/latihan-mengajar-detail.jpg',
+        label:
+          'Institute Profile Detail',
+      },
+    ],
+
+    highlights: [
+      'Built using CodeIgniter 4 with PostgreSQL',
+      'Focused on structured institute profiling',
+      'Designed for teaching and industrial training discovery',
+      'Supports clear presentation of placement information',
+      'Developed as part of the PuLaMi system environment',
+    ],
+
+    github:
+      'https://github.com/Agien99/pulami_institute_profiling',
+
+    liveDemo:
+      'https://profiling.upsi.edu.my',
   },
 
   {
