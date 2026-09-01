@@ -21,7 +21,10 @@ function Hero() {
           </p>
 
           <div className="hero-actions">
-            <a href="#projects" className="hero-button hero-button-primary">
+            <a
+              href="#projects"
+              className="hero-button hero-button-primary"
+            >
               View My Work
             </a>
 
@@ -32,6 +35,15 @@ function Hero() {
               rel="noreferrer"
             >
               View Resume
+            </a>
+
+            <a
+              href="/resume/cover-letter.pdf"
+              className="hero-button hero-button-secondary"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Cover Letter
             </a>
           </div>
         </div>
