@@ -31,16 +31,16 @@ function Navbar() {
             About
           </a>
 
+          <a href="#projects" onClick={closeMenu}>
+            Projects
+          </a>
+
           <a href="#experience" onClick={closeMenu}>
             Experience
           </a>
 
           <a href="#skills" onClick={closeMenu}>
             Skills
-          </a>
-
-          <a href="#projects" onClick={closeMenu}>
-            Projects
           </a>
 
           <a href="#education" onClick={closeMenu}>
