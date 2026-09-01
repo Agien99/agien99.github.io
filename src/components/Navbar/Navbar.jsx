@@ -1,6 +1,33 @@
 import { useState } from 'react';
 import './Navbar.css';
 
+const navLinks = [
+  {
+    label: 'About',
+    href: '#about',
+  },
+  {
+    label: 'Projects',
+    href: '#projects',
+  },
+  {
+    label: 'Experience',
+    href: '#experience',
+  },
+  {
+    label: 'Skills',
+    href: '#skills',
+  },
+  {
+    label: 'Education',
+    href: '#education',
+  },
+  {
+    label: 'Contact',
+    href: '#contact',
+  },
+];
+
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -10,55 +37,72 @@ function Navbar() {
 
   return (
     <nav className="navbar">
+
       <div className="navbar-container">
 
-        {/* LOGO */}
+        {/* BRAND */}
+
         <a
           href="#home"
           className="navbar-logo"
           onClick={closeMenu}
+          aria-label="Go to home"
         >
-          EURGIEN ANAK ANTHONY
+          <span className="navbar-logo-symbol">
+            {'<'}
+          </span>
+
+          <span className="navbar-logo-name">
+            EURGIEN
+          </span>
+
+          <span className="navbar-logo-symbol">
+            {'/>'}
+          </span>
         </a>
 
-        {/* DESKTOP / MOBILE LINKS */}
+
+        {/* NAVIGATION */}
+
         <div
           className={`navbar-links ${
-            menuOpen ? 'navbar-links-open' : ''
+            menuOpen
+              ? 'navbar-links-open'
+              : ''
           }`}
         >
-          <a href="#about" onClick={closeMenu}>
-            About
-          </a>
 
-          <a href="#projects" onClick={closeMenu}>
-            Projects
-          </a>
+          {navLinks.map((link, index) => (
+            <a
+              href={link.href}
+              onClick={closeMenu}
+              key={link.href}
+            >
+              <span className="navbar-link-number">
+                {String(index + 1).padStart(2, '0')}
+              </span>
 
-          <a href="#experience" onClick={closeMenu}>
-            Experience
-          </a>
+              <span>
+                {link.label}
+              </span>
+            </a>
+          ))}
 
-          <a href="#skills" onClick={closeMenu}>
-            Skills
-          </a>
-
-          <a href="#education" onClick={closeMenu}>
-            Education
-          </a>
-
-          <a href="#contact" onClick={closeMenu}>
-            Contact
-          </a>
         </div>
 
-        {/* MOBILE MENU BUTTON */}
+
+        {/* MOBILE BUTTON */}
+
         <button
           type="button"
           className={`navbar-menu-button ${
-            menuOpen ? 'navbar-menu-button-open' : ''
+            menuOpen
+              ? 'navbar-menu-button-open'
+              : ''
           }`}
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() =>
+            setMenuOpen(!menuOpen)
+          }
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
         >
@@ -68,6 +112,7 @@ function Navbar() {
         </button>
 
       </div>
+
     </nav>
   );
 }

@@ -89,15 +89,31 @@ const experiences = [
 
 function Experience() {
   return (
-    <section id="experience" className="experience">
+    <section
+      id="experience"
+      className="experience"
+    >
       <div className="experience-container">
 
-        <div className="experience-heading">
-          <p className="section-label">Experience</p>
+        {/* HEADER */}
+
+        <div className="experience-header">
+
+          <div className="experience-section-label">
+            <span className="experience-label-icon">
+              {'>_'}
+            </span>
+
+            <span>
+              Experience
+            </span>
+          </div>
 
           <h2>
             Professional journey
-            <span> and practical experience.</span>
+            <span>
+              {' '}and practical experience.
+            </span>
           </h2>
 
           <p className="experience-intro">
@@ -105,7 +121,11 @@ function Experience() {
             backend systems, workflow-driven applications, database
             development, and full-stack software engineering.
           </p>
+
         </div>
+
+
+        {/* TIMELINE */}
 
         <div className="experience-timeline">
 
@@ -115,20 +135,39 @@ function Experience() {
               key={`${experience.company}-${index}`}
             >
 
-              <div className="timeline-marker">
+              {/* LEFT META */}
+
+              <div className="experience-meta">
+
+                <span className="experience-index">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+
+                <p className="experience-date">
+                  {experience.period}
+                </p>
+
+              </div>
+
+
+              {/* TIMELINE NODE */}
+
+              <div className="experience-node">
                 <span></span>
               </div>
 
-              <div className="experience-date">
-                {experience.period}
-              </div>
+
+              {/* CONTENT */}
 
               <div className="experience-card">
 
                 <div className="experience-card-header">
 
                   <div>
-                    <h3>{experience.role}</h3>
+                    <h3>
+                      {experience.role}
+                    </h3>
+
                     <p className="experience-company">
                       {experience.company}
                     </p>
@@ -140,24 +179,44 @@ function Experience() {
 
                 </div>
 
+
                 <p className="experience-description">
                   {experience.description}
                 </p>
 
-                <ul className="experience-responsibilities">
-                  {experience.responsibilities.map((item, itemIndex) => (
-                    <li key={itemIndex}>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+
+                <div className="experience-responsibility-list">
+
+                  {experience.responsibilities.map(
+                    (item, itemIndex) => (
+                      <div
+                        className="experience-responsibility"
+                        key={itemIndex}
+                      >
+                        <span className="experience-responsibility-icon">
+                          →
+                        </span>
+
+                        <p>
+                          {item}
+                        </p>
+                      </div>
+                    )
+                  )}
+
+                </div>
+
 
                 <div className="experience-technologies">
-                  {experience.technologies.map((technology) => (
-                    <span key={technology}>
-                      {technology}
-                    </span>
-                  ))}
+
+                  {experience.technologies.map(
+                    (technology) => (
+                      <span key={technology}>
+                        {technology}
+                      </span>
+                    )
+                  )}
+
                 </div>
 
               </div>

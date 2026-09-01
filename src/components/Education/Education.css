@@ -1,267 +1,677 @@
+/* ========================================
+   EDUCATION
+======================================== */
+
 .education {
-  padding: 120px 0;
-  background: #0b0f14;
+  position: relative;
+
+  padding: 100px 0 115px;
+
+  overflow: hidden;
+
+  background: #070d16;
+
+  border-top:
+    1px solid rgba(47, 129, 247, 0.08);
 }
 
+
+/* background glow */
+
+.education::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  right: -280px;
+
+  width: 600px;
+  height: 600px;
+
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(47, 129, 247, 0.06),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
 .education-container {
-  width: min(1200px, 90%);
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1300px, 90%);
+
   margin: 0 auto;
 }
 
-/* =========================
-   HEADING
-========================= */
 
-.education-heading {
-  max-width: 850px;
-  margin-bottom: 65px;
+/* ========================================
+   HEADER
+======================================== */
+
+.education-header {
+  max-width: 790px;
+
+  margin-bottom: 55px;
 }
 
-.education-heading h2 {
+.education-section-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 16px;
+
+  color: #58a6ff;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+
+  text-transform: uppercase;
+}
+
+.education-label-icon {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(47, 129, 247, 0.3);
+
+  border-radius: 7px;
+
+  background:
+    rgba(47, 129, 247, 0.08);
+
+  color: #58a6ff;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.62rem;
+
+  font-weight: 700;
+}
+
+.education-header h2 {
   margin: 0;
 
   color: #f0f6fc;
 
-  font-size: clamp(2.3rem, 5vw, 4rem);
-  line-height: 1.1;
+  font-size:
+    clamp(
+      2rem,
+      4vw,
+      3.2rem
+    );
+
+  line-height: 1.12;
+
   letter-spacing: -2px;
 }
 
-.education-heading h2 span {
-  color: #8b949e;
+.education-header h2 span {
+  color: #64748b;
 }
 
 .education-intro {
-  max-width: 720px;
+  max-width: 700px;
 
-  margin-top: 24px;
+  margin:
+    18px 0 0;
 
-  color: #8b949e;
+  color: #7d8998;
 
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 0.95rem;
+
+  line-height: 1.75;
 }
 
-/* =========================
+
+/* ========================================
    EDUCATION LIST
-========================= */
+======================================== */
 
 .education-list {
   display: flex;
+
   flex-direction: column;
 
-  gap: 24px;
+  gap: 16px;
 }
 
-/* =========================
-   EDUCATION CARD
-========================= */
+
+/* ========================================
+   CARD
+======================================== */
 
 .education-card {
-  padding: 32px;
+  position: relative;
 
-  background: #161b22;
+  display: grid;
 
-  border: 1px solid #30363d;
-  border-radius: 16px;
+  grid-template-columns:
+    45px
+    minmax(0, 1fr)
+    175px;
+
+  gap: 24px;
+
+  align-items: stretch;
+
+  padding: 27px;
+
+  overflow: hidden;
+
+  border:
+    1px solid #1d2938;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(12, 22, 36, 0.94),
+      rgba(7, 14, 24, 0.94)
+    );
 
   transition:
     transform 0.25s ease,
-    border-color 0.25s ease;
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
+
+
+/* corner glow */
+
+.education-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -100px;
+  right: -100px;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(47, 129, 247, 0.035);
+
+  filter: blur(20px);
+
+  transition:
+    background 0.25s ease;
+
+  pointer-events: none;
+}
+
 
 .education-card:hover {
-  transform: translateY(-4px);
+  transform:
+    translateY(-4px);
 
-  border-color: #2f81f7;
+  border-color:
+    rgba(47, 129, 247, 0.48);
+
+  box-shadow:
+    0 18px 40px
+    rgba(0, 0, 0, 0.22);
 }
 
-/* =========================
-   TOP
-========================= */
+.education-card:hover::before {
+  background:
+    rgba(47, 129, 247, 0.08);
+}
 
-.education-card-top {
+
+/* ========================================
+   INDEX
+======================================== */
+
+.education-index-column {
+  position: relative;
+
+  z-index: 2;
+
   display: flex;
+
+  flex-direction: column;
+
   align-items: center;
-  justify-content: space-between;
+}
 
-  gap: 20px;
+.education-index {
+  width: 34px;
+  height: 34px;
 
-  margin-bottom: 28px;
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(47, 129, 247, 0.35);
+
+  border-radius: 8px;
+
+  background:
+    rgba(47, 129, 247, 0.07);
+
+  color: #58a6ff;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+}
+
+.education-index-line {
+  width: 1px;
+
+  flex: 1;
+
+  min-height: 80px;
+
+  margin-top: 11px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(47, 129, 247, 0.4),
+      rgba(47, 129, 247, 0.03)
+    );
+}
+
+
+/* ========================================
+   MAIN
+======================================== */
+
+.education-main {
+  position: relative;
+
+  z-index: 2;
+
+  padding-right: 15px;
+}
+
+
+/* Meta */
+
+.education-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 13px;
 }
 
 .education-period {
-  color: #8b949e;
+  color: #718096;
 
-  font-size: 0.9rem;
+  font-size: 0.75rem;
+
   font-weight: 600;
 }
 
 .education-level {
-  padding: 7px 12px;
+  padding:
+    5px 9px;
 
-  background: #0d1117;
+  border:
+    1px solid #263447;
 
-  border: 1px solid #30363d;
-  border-radius: 20px;
+  border-radius: 999px;
 
-  color: #8b949e;
+  background:
+    rgba(7, 15, 27, 0.75);
 
-  font-size: 0.75rem;
+  color: #8b98a9;
+
+  font-size: 0.62rem;
+
   font-weight: 600;
 }
 
-/* =========================
-   CONTENT
-========================= */
 
-.education-card-content {
-  display: grid;
-
-  grid-template-columns: 1fr auto;
-
-  gap: 50px;
-
-  align-items: center;
-}
+/* Qualification */
 
 .education-main h3 {
-  max-width: 750px;
+  max-width: 800px;
 
-  margin: 0 0 10px;
+  margin:
+    0 0 9px;
 
-  color: #f0f6fc;
+  color: #e6edf3;
 
-  font-size: 1.45rem;
+  font-size: 1.2rem;
+
   line-height: 1.4;
 }
 
+
+/* Institution */
+
 .education-institution {
-  margin: 0 0 20px;
+  display: flex;
 
-  color: #2f81f7;
+  align-items: center;
 
-  font-size: 0.95rem;
+  gap: 8px;
+
+  margin-bottom: 16px;
+
+  color: #58a6ff;
+
+  font-size: 0.8rem;
+
   font-weight: 600;
 }
 
-.education-description {
-  max-width: 750px;
-
-  margin: 0 0 24px;
-
-  color: #8b949e;
-
-  font-size: 0.95rem;
-  line-height: 1.75;
+.education-institution-icon {
+  font-size: 0.68rem;
 }
 
-/* =========================
+
+/* Description */
+
+.education-description {
+  max-width: 800px;
+
+  margin:
+    0 0 19px;
+
+  color: #788699;
+
+  font-size: 0.83rem;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
    HIGHLIGHTS
-========================= */
+======================================== */
 
 .education-highlights {
   display: flex;
+
   flex-wrap: wrap;
 
-  gap: 8px;
+  gap: 7px;
 }
 
 .education-highlights span {
-  padding: 7px 11px;
+  padding:
+    6px 9px;
 
-  background: rgba(47, 129, 247, 0.1);
+  border:
+    1px solid
+    rgba(47, 129, 247, 0.16);
 
   border-radius: 6px;
 
+  background:
+    rgba(47, 129, 247, 0.055);
+
   color: #79c0ff;
 
-  font-size: 0.78rem;
+  font-size: 0.67rem;
+
   font-weight: 600;
 }
 
-/* =========================
+
+/* ========================================
    CGPA
-========================= */
+======================================== */
 
 .education-cgpa {
-  min-width: 130px;
+  position: relative;
 
-  padding-left: 35px;
-
-  border-left: 1px solid #30363d;
+  z-index: 2;
 
   display: flex;
+
   flex-direction: column;
-  align-items: flex-start;
+
+  justify-content: center;
+
+  padding-left: 26px;
+
+  border-left:
+    1px solid #1d2a3b;
 }
 
 .cgpa-label {
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 
-  color: #8b949e;
+  color: #657284;
 
-  font-size: 0.75rem;
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.62rem;
+
   font-weight: 700;
-  letter-spacing: 1.5px;
+
+  letter-spacing: 1.4px;
 }
 
-.education-cgpa strong {
+.cgpa-value {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 5px;
+}
+
+.cgpa-value strong {
   color: #f0f6fc;
 
-  font-size: 2.4rem;
+  font-size: 2.1rem;
+
   line-height: 1;
+
+  letter-spacing: -1px;
 }
 
-.cgpa-total {
-  margin-top: 5px;
+.cgpa-value span {
+  color: #4f5d6e;
 
-  color: #484f58;
-
-  font-size: 0.8rem;
+  font-size: 0.68rem;
 }
 
-/* =========================
-   MOBILE
-========================= */
 
-@media (max-width: 700px) {
+/* Progress */
 
-  .education {
-    padding: 90px 0;
-  }
+.cgpa-bar {
+  width: 100%;
+  height: 4px;
 
-  .education-heading {
-    margin-bottom: 45px;
-  }
+  margin-top: 14px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background:
+    #172231;
+}
+
+.cgpa-progress {
+  height: 100%;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #0969da,
+      #58a6ff
+    );
+
+  box-shadow:
+    0 0 10px
+    rgba(47, 129, 247, 0.35);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 850px) {
 
   .education-card {
-    padding: 24px;
-  }
+    grid-template-columns:
+      40px
+      minmax(0, 1fr);
 
-  .education-card-top {
-    align-items: flex-start;
-    flex-direction: column;
-
-    gap: 12px;
-  }
-
-  .education-card-content {
-    grid-template-columns: 1fr;
-
-    gap: 28px;
+    gap: 18px;
   }
 
   .education-cgpa {
-    padding-left: 0;
-    padding-top: 20px;
+    grid-column:
+      2;
+
+    padding:
+      20px 0 0;
 
     border-left: none;
-    border-top: 1px solid #30363d;
+
+    border-top:
+      1px solid #1d2a3b;
   }
 
+  .cgpa-bar {
+    max-width: 250px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+  .education {
+    padding:
+      70px 0 80px;
+  }
+
+  .education-header {
+    margin-bottom: 40px;
+  }
+
+  .education-header h2 {
+    font-size:
+      clamp(
+        2rem,
+        9vw,
+        2.7rem
+      );
+
+    letter-spacing: -1.5px;
+  }
+
+  .education-card {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+
+    padding:
+      21px 19px;
+  }
+
+
+  /* remove left index column */
+
+  .education-index-column {
+    display: none;
+  }
+
+
+  .education-main {
+    padding-right: 0;
+  }
+
+
+  /* meta */
+
+  .education-meta {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 14px;
+  }
+
+
   .education-main h3 {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
+  }
+
+
+  /* CGPA */
+
+  .education-cgpa {
+    grid-column: auto;
+
+    margin-top: 22px;
+
+    padding-top: 18px;
+
+    border-top:
+      1px solid #1d2a3b;
+  }
+
+  .cgpa-value strong {
+    font-size: 1.9rem;
+  }
+
+  .cgpa-bar {
+    max-width: 220px;
   }
 
 }

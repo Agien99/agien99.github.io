@@ -1,21 +1,64 @@
+import {
+  useEffect
+} from 'react';
+
 import './ProjectModal.css';
 
-function ProjectModal({ project, onClose }) {
-  if (!project) return null;
+function ProjectModal({
+  project,
+  onClose
+}) {
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    document.body.style.overflow =
+      'hidden';
+
+    window.addEventListener(
+      'keydown',
+      handleKeyDown
+    );
+
+    return () => {
+      document.body.style.overflow =
+        '';
+
+      window.removeEventListener(
+        'keydown',
+        handleKeyDown
+      );
+    };
+  }, [onClose]);
+
+
+  if (!project) {
+    return null;
+  }
+
+
+  const isSuccessful =
+    project.status === 'Completed' ||
+    project.status === 'Live';
+
 
   return (
     <div
       className="project-modal-backdrop"
       onClick={onClose}
     >
+
       <div
         className="project-modal"
-        onClick={(event) => event.stopPropagation()}
+        onClick={(event) =>
+          event.stopPropagation()
+        }
       >
 
-        {/* =========================
-            CLOSE BUTTON
-        ========================= */}
+        {/* CLOSE */}
 
         <button
           type="button"
@@ -26,9 +69,8 @@ function ProjectModal({ project, onClose }) {
           ×
         </button>
 
-        {/* =========================
-            HERO IMAGE
-        ========================= */}
+
+        {/* HERO */}
 
         {project.detailImage && (
           <div
@@ -42,35 +84,45 @@ function ProjectModal({ project, onClose }) {
               src={project.detailImage}
               alt={`${project.title} project preview`}
             />
+
+            <div className="project-modal-hero-overlay"></div>
           </div>
         )}
 
-        {/* =========================
-            CONTENT
-        ========================= */}
+
+        {/* CONTENT */}
 
         <div className="project-modal-content">
 
-          {/* =========================
-              HEADER
-          ========================= */}
+          {/* HEADER */}
 
-          <div className="project-modal-header">
+          <header className="project-modal-header">
 
-            <div>
-              <p className="project-modal-category">
-                {project.category}
-              </p>
+            <div className="project-modal-heading">
+
+              <div className="project-modal-category-row">
+
+                <span className="project-modal-code">
+                  {'{ }'}
+                </span>
+
+                <p className="project-modal-category">
+                  {project.category}
+                </p>
+
+              </div>
 
               <h2>
                 {project.title}
               </h2>
+
             </div>
+
 
             <span
               className={`project-modal-status ${
-                project.status === 'Completed'
-                  ? 'project-modal-status-completed'
+                isSuccessful
+                  ? 'project-modal-status-success'
                   : 'project-modal-status-development'
               }`}
             >
@@ -79,18 +131,23 @@ function ProjectModal({ project, onClose }) {
               {project.status}
             </span>
 
-          </div>
+          </header>
 
-          {/* =========================
-              PROJECT OVERVIEW
-          ========================= */}
+
+          {/* OVERVIEW */}
 
           {project.overview && (
             <section className="project-detail-section">
 
-              <h3>
-                Project Overview
-              </h3>
+              <div className="project-detail-heading">
+                <span>
+                  01
+                </span>
+
+                <h3>
+                  Project Overview
+                </h3>
+              </div>
 
               <p>
                 {project.overview}
@@ -99,16 +156,21 @@ function ProjectModal({ project, onClose }) {
             </section>
           )}
 
-          {/* =========================
-              MY ROLE
-          ========================= */}
+
+          {/* ROLE */}
 
           {project.role && (
             <section className="project-detail-section">
 
-              <h3>
-                My Role
-              </h3>
+              <div className="project-detail-heading">
+                <span>
+                  02
+                </span>
+
+                <h3>
+                  My Role
+                </h3>
+              </div>
 
               <p className="project-role">
                 {project.role}
@@ -117,113 +179,148 @@ function ProjectModal({ project, onClose }) {
             </section>
           )}
 
-          {/* =========================
-              CORE FEATURES
-          ========================= */}
 
-          {project.features && project.features.length > 0 && (
-            <section className="project-detail-section">
+          {/* FEATURES */}
 
-              <h3>
-                Core Features
-              </h3>
+          {project.features &&
+            project.features.length > 0 && (
+              <section className="project-detail-section">
 
-              <div className="project-feature-grid">
+                <div className="project-detail-heading">
+                  <span>
+                    03
+                  </span>
 
-                {project.features.map((feature) => (
-                  <div
-                    className="project-feature-item"
-                    key={feature}
-                  >
-                    <span>✓</span>
+                  <h3>
+                    Core Features
+                  </h3>
+                </div>
 
-                    <p>
-                      {feature}
-                    </p>
-                  </div>
-                ))}
+                <div className="project-feature-grid">
 
-              </div>
+                  {project.features.map(
+                    (feature) => (
+                      <div
+                        className="project-feature-item"
+                        key={feature}
+                      >
+                        <span className="project-feature-check">
+                          ✓
+                        </span>
 
-            </section>
-          )}
+                        <p>
+                          {feature}
+                        </p>
+                      </div>
+                    )
+                  )}
 
-          {/* =========================
-              TECH STACK
-          ========================= */}
+                </div>
+
+              </section>
+            )}
+
+
+          {/* TECH STACK */}
 
           {project.fullTechnologies &&
             project.fullTechnologies.length > 0 && (
               <section className="project-detail-section">
 
-                <h3>
-                  Tech Stack
-                </h3>
+                <div className="project-detail-heading">
+                  <span>
+                    04
+                  </span>
+
+                  <h3>
+                    Tech Stack
+                  </h3>
+                </div>
 
                 <div className="project-modal-technologies">
 
-                  {project.fullTechnologies.map((technology) => (
-                    <span key={technology}>
-                      {technology}
-                    </span>
-                  ))}
+                  {project.fullTechnologies.map(
+                    (technology) => (
+                      <span key={technology}>
+                        {technology}
+                      </span>
+                    )
+                  )}
 
                 </div>
 
               </section>
             )}
 
-          {/* =========================
-              WORKFLOW
-          ========================= */}
+
+          {/* WORKFLOW */}
 
           {project.workflow &&
             project.workflow.length > 0 && (
               <section className="project-detail-section">
 
-                <h3>
-                  Workflow
-                </h3>
+                <div className="project-detail-heading">
+                  <span>
+                    05
+                  </span>
+
+                  <h3>
+                    Workflow
+                  </h3>
+                </div>
 
                 <div className="project-workflow">
 
-                  {project.workflow.map((step, index) => (
-                    <div
-                      className="workflow-step"
-                      key={`${step}-${index}`}
-                    >
-                      <div className="workflow-number">
-                        {index + 1}
+                  {project.workflow.map(
+                    (step, index) => (
+                      <div
+                        className="workflow-step"
+                        key={`${step}-${index}`}
+                      >
+
+                        <div className="workflow-number">
+                          {String(index + 1).padStart(
+                            2,
+                            '0'
+                          )}
+                        </div>
+
+                        <p>
+                          {step}
+                        </p>
+
+                        {index <
+                          project.workflow.length - 1 && (
+                          <span className="workflow-arrow">
+                            →
+                          </span>
+                        )}
+
                       </div>
-
-                      <p>
-                        {step}
-                      </p>
-
-                      {index < project.workflow.length - 1 && (
-                        <span className="workflow-arrow">
-                          →
-                        </span>
-                      )}
-                    </div>
-                  ))}
+                    )
+                  )}
 
                 </div>
 
               </section>
             )}
 
-          {/* =========================
-              SCREENSHOTS
-          ========================= */}
+
+          {/* SCREENSHOTS */}
 
           {project.screenshots &&
             project.screenshots.length > 0 && (
               <section className="project-detail-section">
 
-                <h3>
-                  Screenshots
-                </h3>
+                <div className="project-detail-heading">
+                  <span>
+                    06
+                  </span>
+
+                  <h3>
+                    Screenshots
+                  </h3>
+                </div>
 
                 <div
                   className={`project-screenshot-grid ${
@@ -233,77 +330,93 @@ function ProjectModal({ project, onClose }) {
                   }`}
                 >
 
-                  {project.screenshots.map((screenshot) => (
-                    <div
-                      className={`project-screenshot ${
-                        project.type === 'mobile'
-                          ? 'project-screenshot-mobile'
-                          : ''
-                      }`}
-                      key={screenshot.image}
-                    >
+                  {project.screenshots.map(
+                    (screenshot) => (
+                      <div
+                        className={`project-screenshot ${
+                          project.type === 'mobile'
+                            ? 'project-screenshot-mobile'
+                            : ''
+                        }`}
+                        key={screenshot.image}
+                      >
 
-                      <div className="project-screenshot-image">
-                        <img
-                          src={screenshot.image}
-                          alt={screenshot.label}
-                        />
+                        <div className="project-screenshot-image">
+                          <img
+                            src={screenshot.image}
+                            alt={screenshot.label}
+                          />
+                        </div>
+
+                        <p>
+                          {screenshot.label}
+                        </p>
+
                       </div>
-
-                      <p>
-                        {screenshot.label}
-                      </p>
-
-                    </div>
-                  ))}
+                    )
+                  )}
 
                 </div>
 
               </section>
             )}
 
-          {/* =========================
-              TECHNICAL HIGHLIGHTS
-          ========================= */}
+
+          {/* TECHNICAL HIGHLIGHTS */}
 
           {project.highlights &&
             project.highlights.length > 0 && (
               <section className="project-detail-section">
 
-                <h3>
-                  Technical Highlights
-                </h3>
+                <div className="project-detail-heading">
+                  <span>
+                    07
+                  </span>
+
+                  <h3>
+                    Technical Highlights
+                  </h3>
+                </div>
 
                 <div className="project-highlight-list">
 
-                  {project.highlights.map((highlight) => (
-                    <div
-                      className="project-highlight-item"
-                      key={highlight}
-                    >
-                      <span>→</span>
+                  {project.highlights.map(
+                    (highlight) => (
+                      <div
+                        className="project-highlight-item"
+                        key={highlight}
+                      >
+                        <span>
+                          →
+                        </span>
 
-                      <p>
-                        {highlight}
-                      </p>
-                    </div>
-                  ))}
+                        <p>
+                          {highlight}
+                        </p>
+                      </div>
+                    )
+                  )}
 
                 </div>
 
               </section>
             )}
 
-          {/* =========================
-              SYSTEM DESIGN / ERD
-          ========================= */}
+
+          {/* ERD */}
 
           {project.erd && (
             <section className="project-detail-section">
 
-              <h3>
-                System Design
-              </h3>
+              <div className="project-detail-heading">
+                <span>
+                  08
+                </span>
+
+                <h3>
+                  System Design
+                </h3>
+              </div>
 
               <div className="project-erd">
 
@@ -317,21 +430,26 @@ function ProjectModal({ project, onClose }) {
             </section>
           )}
 
-          {/* =========================
-              PROJECT STATUS
-          ========================= */}
+
+          {/* STATUS */}
 
           {project.status && (
             <section className="project-detail-section">
 
-              <h3>
-                Project Status
-              </h3>
+              <div className="project-detail-heading">
+                <span>
+                  //
+                </span>
+
+                <h3>
+                  Project Status
+                </h3>
+              </div>
 
               <p
                 className={`project-status-text ${
-                  project.status === 'Completed'
-                    ? 'project-status-text-completed'
+                  isSuccessful
+                    ? 'project-status-text-success'
                     : ''
                 }`}
               >
@@ -341,27 +459,50 @@ function ProjectModal({ project, onClose }) {
             </section>
           )}
 
-          {/* =========================
-              ACTIONS
-          ========================= */}
 
-          {project.github && (
+          {/* ACTIONS */}
+
+          {(project.liveDemo ||
+            project.github) && (
             <div className="project-modal-actions">
 
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                className="project-modal-button"
-              >
-                View GitHub Repository
-              </a>
+              {project.liveDemo && (
+                <a
+                  href={project.liveDemo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-modal-button"
+                >
+                  View Live Website
+
+                  <span>
+                    ↗
+                  </span>
+                </a>
+              )}
+
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-modal-button project-modal-button-secondary"
+                >
+                  View GitHub Repository
+
+                  <span>
+                    ↗
+                  </span>
+                </a>
+              )}
 
             </div>
           )}
 
         </div>
+
       </div>
+
     </div>
   );
 }

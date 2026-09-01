@@ -1,95 +1,143 @@
+/* ========================================
+   BACKDROP
+======================================== */
+
 .project-modal-backdrop {
   position: fixed;
+
   inset: 0;
 
   z-index: 5000;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
-  padding: 30px;
+  padding: 28px;
 
-  background: rgba(0, 0, 0, 0.8);
+  background:
+    rgba(2, 6, 12, 0.86);
 
-  backdrop-filter: blur(8px);
+  backdrop-filter:
+    blur(10px);
+
+  -webkit-backdrop-filter:
+    blur(10px);
 }
+
+
+/* ========================================
+   MODAL
+======================================== */
 
 .project-modal {
   position: relative;
 
-  width: min(1100px, 100%);
+  width: min(1120px, 100%);
+
   max-height: 92vh;
 
   overflow-y: auto;
 
-  background: #0d1117;
+  overflow-x: hidden;
 
-  border: 1px solid #30363d;
-  border-radius: 18px;
+  border:
+    1px solid #203047;
+
+  border-radius: 14px;
+
+  background: #060d17;
 
   box-shadow:
-    0 40px 100px rgba(0, 0, 0, 0.55);
+    0 40px 100px
+    rgba(0, 0, 0, 0.6),
+    0 0 60px
+    rgba(47, 129, 247, 0.05);
+
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    #26384d
+    #07101b;
 }
 
-/* =========================
-   CLOSE BUTTON
-========================= */
+
+/* ========================================
+   CLOSE
+======================================== */
 
 .project-modal-close {
   position: absolute;
 
-  top: 18px;
-  right: 18px;
+  top: 16px;
+  right: 16px;
 
-  z-index: 10;
+  z-index: 20;
 
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
-  border: 1px solid #30363d;
-  border-radius: 50%;
+  padding: 0;
 
-  background: rgba(13, 17, 23, 0.9);
+  border:
+    1px solid #2a3b50;
 
-  color: #f0f6fc;
+  border-radius: 9px;
 
-  font-size: 1.6rem;
-  line-height: 1;
+  background:
+    rgba(5, 12, 22, 0.88);
+
+  color: #c9d1d9;
+
+  font-size: 1.35rem;
 
   cursor: pointer;
 
+  backdrop-filter:
+    blur(8px);
+
   transition:
-    background 0.2s ease,
+    color 0.2s ease,
     border-color 0.2s ease,
+    background 0.2s ease,
     transform 0.2s ease;
 }
 
 .project-modal-close:hover {
-  background: #161b22;
+  color: #ffffff;
 
   border-color: #2f81f7;
 
-  transform: rotate(4deg);
+  background:
+    rgba(47, 129, 247, 0.12);
+
+  transform:
+    rotate(4deg);
 }
 
-/* =========================
-   HERO IMAGE
-========================= */
+
+/* ========================================
+   HERO
+======================================== */
 
 .project-modal-hero {
+  position: relative;
+
   width: 100%;
-  height: 430px;
+  height: 400px;
 
   overflow: hidden;
 
-  background: #161b22;
+  border-bottom:
+    1px solid #1d2a3b;
 
-  border-bottom: 1px solid #30363d;
+  background: #07101b;
 }
 
 .project-modal-hero img {
@@ -102,64 +150,131 @@
   object-position: top;
 }
 
-/* Mobile project hero */
+.project-modal-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 55%,
+      rgba(6, 13, 23, 0.7) 100%
+    );
+}
+
+
+/* Mobile hero */
 
 .project-modal-hero-mobile {
-  height: 430px;
+  height: 410px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
-  padding: 30px;
+  padding: 25px;
 
   background:
     radial-gradient(
       circle at center,
-      rgba(47, 129, 247, 0.12),
-      transparent 45%
+      rgba(47, 129, 247, 0.13),
+      transparent 43%
     ),
-    #0a0e13;
+    #040a12;
 }
 
 .project-modal-hero-mobile img {
   width: auto;
+
   max-width: 100%;
 
   height: 100%;
 
   object-fit: contain;
 
-  border-radius: 14px;
+  border-radius: 12px;
+
+  filter:
+    drop-shadow(
+      0 20px 35px
+      rgba(0, 0, 0, 0.45)
+    );
 }
 
-/* =========================
+
+/* ========================================
    CONTENT
-========================= */
+======================================== */
 
 .project-modal-content {
-  padding: 45px;
+  padding:
+    38px 42px 42px;
 }
+
+
+/* ========================================
+   HEADER
+======================================== */
 
 .project-modal-header {
   display: flex;
+
   align-items: flex-start;
   justify-content: space-between;
 
   gap: 30px;
 
-  margin-bottom: 50px;
+  margin-bottom: 45px;
+}
+
+.project-modal-category-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 11px;
+}
+
+.project-modal-code {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(47, 129, 247, 0.25);
+
+  border-radius: 6px;
+
+  background:
+    rgba(47, 129, 247, 0.07);
+
+  color: #58a6ff;
+
+  font-size: 0.55rem;
 }
 
 .project-modal-category {
-  margin: 0 0 10px;
+  margin: 0;
 
-  color: #2f81f7;
+  color: #58a6ff;
 
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+
   font-weight: 700;
 
-  letter-spacing: 1.3px;
+  letter-spacing: 1px;
+
   text-transform: uppercase;
 }
 
@@ -168,95 +283,145 @@
 
   color: #f0f6fc;
 
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size:
+    clamp(
+      1.9rem,
+      4vw,
+      2.8rem
+    );
+
   line-height: 1.15;
+
+  letter-spacing: -1.5px;
 }
 
-/* =========================
+
+/* ========================================
    STATUS
-========================= */
+======================================== */
 
 .project-modal-status {
+  flex-shrink: 0;
+
   display: inline-flex;
+
   align-items: center;
 
   gap: 8px;
 
-  flex-shrink: 0;
+  padding:
+    8px 12px;
 
-  padding: 9px 14px;
+  border:
+    1px solid #233248;
 
-  background: #161b22;
+  border-radius: 999px;
 
-  border: 1px solid #30363d;
-  border-radius: 30px;
+  background:
+    rgba(12, 23, 38, 0.8);
 
-  color: #c9d1d9;
+  color: #9aa7b8;
 
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+
   font-weight: 600;
 }
 
 .project-modal-status-dot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 
   border-radius: 50%;
-
-  background: #d29922;
 }
 
-.project-modal-status-completed
+.project-modal-status-success
 .project-modal-status-dot {
   background: #3fb950;
+
+  box-shadow:
+    0 0 9px
+    rgba(63, 185, 80, 0.6);
 }
 
 .project-modal-status-development
 .project-modal-status-dot {
   background: #d29922;
+
+  box-shadow:
+    0 0 9px
+    rgba(210, 153, 34, 0.5);
 }
 
-/* =========================
+
+/* ========================================
    DETAIL SECTION
-========================= */
+======================================== */
 
 .project-detail-section {
-  margin-bottom: 55px;
+  margin-bottom: 48px;
 }
 
 .project-detail-section:last-of-type {
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 
-.project-detail-section h3 {
-  margin: 0 0 20px;
+.project-detail-heading {
+  display: flex;
 
-  color: #f0f6fc;
+  align-items: center;
 
-  font-size: 1.25rem;
+  gap: 10px;
+
+  margin-bottom: 17px;
+}
+
+.project-detail-heading > span {
+  color:
+    rgba(88, 166, 255, 0.55);
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.65rem;
+
+  font-weight: 700;
+}
+
+.project-detail-heading h3 {
+  margin: 0;
+
+  color: #e6edf3;
+
+  font-size: 1.08rem;
+
+  font-weight: 600;
 }
 
 .project-detail-section > p {
-  max-width: 850px;
+  max-width: 860px;
 
   margin: 0;
 
-  color: #8b949e;
+  color: #7d8998;
 
-  font-size: 1rem;
-  line-height: 1.85;
+  font-size: 0.94rem;
+
+  line-height: 1.8;
 }
 
 .project-role {
   color: #c9d1d9 !important;
 
-  font-size: 1.1rem !important;
+  font-size: 1rem !important;
+
   font-weight: 600;
 }
 
-/* =========================
+
+/* ========================================
    FEATURES
-========================= */
+======================================== */
 
 .project-feature-grid {
   display: grid;
@@ -264,25 +429,32 @@
   grid-template-columns:
     repeat(2, minmax(0, 1fr));
 
-  gap: 14px;
+  gap: 11px;
 }
 
 .project-feature-item {
   display: flex;
+
   align-items: flex-start;
 
-  gap: 12px;
+  gap: 11px;
 
-  padding: 16px;
+  padding:
+    14px 15px;
 
-  background: #161b22;
+  border:
+    1px solid #192739;
 
-  border: 1px solid #30363d;
-  border-radius: 10px;
+  border-radius: 8px;
+
+  background:
+    rgba(10, 20, 34, 0.72);
 }
 
-.project-feature-item span {
+.project-feature-check {
   color: #3fb950;
+
+  font-size: 0.8rem;
 
   font-weight: 700;
 }
@@ -290,47 +462,57 @@
 .project-feature-item p {
   margin: 0;
 
-  color: #c9d1d9;
+  color: #abb6c4;
 
-  font-size: 0.9rem;
+  font-size: 0.82rem;
+
   line-height: 1.5;
 }
 
-/* =========================
+
+/* ========================================
    TECHNOLOGIES
-========================= */
+======================================== */
 
 .project-modal-technologies {
   display: flex;
+
   flex-wrap: wrap;
 
-  gap: 10px;
+  gap: 8px;
 }
 
 .project-modal-technologies span {
-  padding: 9px 13px;
+  padding:
+    7px 11px;
 
-  background: rgba(47, 129, 247, 0.1);
+  border:
+    1px solid
+    rgba(47, 129, 247, 0.2);
 
-  border: 1px solid rgba(47, 129, 247, 0.2);
-  border-radius: 7px;
+  border-radius: 6px;
+
+  background:
+    rgba(47, 129, 247, 0.07);
 
   color: #79c0ff;
 
-  font-size: 0.85rem;
+  font-size: 0.75rem;
+
   font-weight: 600;
 }
 
-/* =========================
+
+/* ========================================
    WORKFLOW
-========================= */
+======================================== */
 
 .project-workflow {
   display: flex;
-  align-items: stretch;
-  justify-content: space-between;
 
-  gap: 12px;
+  align-items: stretch;
+
+  gap: 10px;
 }
 
 .workflow-step {
@@ -338,70 +520,89 @@
 
   flex: 1;
 
-  min-height: 130px;
+  min-height: 115px;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
-  padding: 18px;
+  padding: 14px;
 
   text-align: center;
 
-  background: #161b22;
+  border:
+    1px solid #192739;
 
-  border: 1px solid #30363d;
-  border-radius: 10px;
+  border-radius: 8px;
+
+  background:
+    rgba(10, 20, 34, 0.72);
 }
 
 .workflow-number {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
-  margin-bottom: 12px;
+  margin-bottom: 9px;
+
+  border:
+    1px solid
+    rgba(47, 129, 247, 0.22);
 
   border-radius: 50%;
 
-  background: rgba(47, 129, 247, 0.15);
+  background:
+    rgba(47, 129, 247, 0.08);
 
   color: #79c0ff;
 
-  font-size: 0.8rem;
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.65rem;
+
   font-weight: 700;
 }
 
 .workflow-step p {
   margin: 0;
 
-  color: #c9d1d9;
+  color: #aab5c3;
 
-  font-size: 0.8rem;
+  font-size: 0.72rem;
+
   line-height: 1.4;
 }
 
 .workflow-arrow {
   position: absolute;
 
-  right: -19px;
+  right: -16px;
   top: 50%;
 
-  transform: translateY(-50%);
+  z-index: 4;
 
-  color: #484f58;
+  transform:
+    translateY(-50%);
 
-  font-size: 1rem;
+  color: #3f4d5e;
 
-  z-index: 2;
+  font-size: 0.85rem;
 }
 
-/* =========================
+
+/* ========================================
    SCREENSHOTS
-========================= */
+======================================== */
 
 .project-screenshot-grid {
   display: grid;
@@ -409,16 +610,18 @@
   grid-template-columns:
     repeat(2, minmax(0, 1fr));
 
-  gap: 20px;
+  gap: 16px;
 }
 
 .project-screenshot {
   overflow: hidden;
 
-  background: #161b22;
+  border:
+    1px solid #1d2b3d;
 
-  border: 1px solid #30363d;
-  border-radius: 12px;
+  border-radius: 9px;
+
+  background: #08111d;
 }
 
 .project-screenshot-image {
@@ -426,9 +629,10 @@
 
   overflow: hidden;
 
-  background: #0d1117;
+  border-bottom:
+    1px solid #192638;
 
-  border-bottom: 1px solid #30363d;
+  background: #040a12;
 }
 
 .project-screenshot-image img {
@@ -440,46 +644,66 @@
 
   object-fit: cover;
   object-position: top;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.project-screenshot:hover
+.project-screenshot-image img {
+  transform:
+    scale(1.015);
 }
 
 .project-screenshot p {
   margin: 0;
 
-  padding: 13px 16px;
+  padding:
+    11px 13px;
 
-  color: #c9d1d9;
+  color: #aab5c3;
 
-  font-size: 0.85rem;
+  font-size: 0.75rem;
+
   font-weight: 600;
 }
 
-/* =========================
-   MOBILE PROJECT SCREENSHOTS
-========================= */
+
+/* ========================================
+   MOBILE SCREENSHOTS
+======================================== */
 
 .project-screenshot-grid-mobile {
   grid-template-columns:
     repeat(3, minmax(0, 1fr));
 
-  gap: 22px;
+  gap: 18px;
 }
 
 .project-screenshot-mobile {
   width: 100%;
-  max-width: 280px;
+
+  max-width: 270px;
 
   justify-self: center;
 }
 
 .project-screenshot-mobile
 .project-screenshot-image {
-  padding: 14px;
+  padding: 12px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
-  background: #0a0e13;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(47, 129, 247, 0.07),
+      transparent 70%
+    ),
+    #040a12;
 }
 
 .project-screenshot-mobile
@@ -491,12 +715,13 @@
 
   object-fit: contain;
 
-  border-radius: 9px;
+  border-radius: 8px;
 }
 
-/* =========================
-   TECHNICAL HIGHLIGHTS
-========================= */
+
+/* ========================================
+   HIGHLIGHTS
+======================================== */
 
 .project-highlight-list {
   display: grid;
@@ -504,42 +729,48 @@
   grid-template-columns:
     repeat(2, minmax(0, 1fr));
 
-  gap: 12px 25px;
+  gap:
+    11px 22px;
 }
 
 .project-highlight-item {
   display: flex;
+
   align-items: flex-start;
 
-  gap: 10px;
+  gap: 9px;
 }
 
 .project-highlight-item span {
-  color: #2f81f7;
+  color: #58a6ff;
 
-  font-weight: 700;
+  font-size: 0.8rem;
 }
 
 .project-highlight-item p {
   margin: 0;
 
-  color: #8b949e;
+  color: #7d8998;
 
-  font-size: 0.92rem;
-  line-height: 1.6;
+  font-size: 0.82rem;
+
+  line-height: 1.55;
 }
 
-/* =========================
+
+/* ========================================
    ERD
-========================= */
+======================================== */
 
 .project-erd {
   overflow: hidden;
 
-  background: #161b22;
+  border:
+    1px solid #1d2b3d;
 
-  border: 1px solid #30363d;
-  border-radius: 12px;
+  border-radius: 9px;
+
+  background: #08111d;
 }
 
 .project-erd img {
@@ -550,9 +781,10 @@
   object-fit: contain;
 }
 
-/* =========================
+
+/* ========================================
    STATUS TEXT
-========================= */
+======================================== */
 
 .project-status-text {
   color: #d29922 !important;
@@ -560,69 +792,105 @@
   font-weight: 700;
 }
 
-.project-status-text-completed {
+.project-status-text-success {
   color: #3fb950 !important;
 }
 
-/* =========================
+
+/* ========================================
    ACTIONS
-========================= */
+======================================== */
 
 .project-modal-actions {
   display: flex;
+
   flex-wrap: wrap;
 
-  gap: 14px;
+  gap: 11px;
 
-  padding-top: 30px;
+  padding-top: 27px;
 
-  border-top: 1px solid #30363d;
+  border-top:
+    1px solid #1b293b;
 }
 
 .project-modal-button {
+  min-height: 44px;
+
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
-  min-height: 46px;
+  gap: 9px;
 
-  padding: 0 20px;
+  padding:
+    0 17px;
 
-  background: #2f81f7;
+  border:
+    1px solid #2f81f7;
 
-  border: 1px solid #2f81f7;
-  border-radius: 8px;
+  border-radius: 7px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2494ff,
+      #0969da
+    );
 
   color: #ffffff;
 
   text-decoration: none;
 
-  font-size: 0.9rem;
+  font-size: 0.78rem;
+
   font-weight: 600;
 
   transition:
-    background 0.2s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
 .project-modal-button:hover {
-  background: #1f6feb;
+  transform:
+    translateY(-2px);
 
-  transform: translateY(-2px);
+  box-shadow:
+    0 10px 28px
+    rgba(47, 129, 247, 0.24);
 }
 
-/* =========================
+.project-modal-button-secondary {
+  border-color: #2b3a4f;
+
+  background:
+    rgba(10, 20, 34, 0.75);
+
+  color: #d9e2ec;
+}
+
+.project-modal-button-secondary:hover {
+  border-color: #2f81f7;
+
+  background:
+    rgba(47, 129, 247, 0.08);
+}
+
+
+/* ========================================
    TABLET
-========================= */
+======================================== */
 
 @media (max-width: 900px) {
 
   .project-modal-hero {
-    height: 330px;
+    height: 320px;
   }
 
   .project-modal-hero-mobile {
-    height: 380px;
+    height: 370px;
   }
 
   .project-workflow {
@@ -643,9 +911,10 @@
 
 }
 
-/* =========================
+
+/* ========================================
    MOBILE
-========================= */
+======================================== */
 
 @media (max-width: 650px) {
 
@@ -655,6 +924,7 @@
 
   .project-modal {
     width: 100%;
+
     max-height: 100vh;
 
     border-radius: 0;
@@ -663,26 +933,32 @@
     border-right: none;
   }
 
+  .project-modal-close {
+    top: 12px;
+    right: 12px;
+  }
+
   .project-modal-hero {
-    height: 240px;
+    height: 230px;
   }
 
   .project-modal-hero-mobile {
-    height: 360px;
+    height: 340px;
 
-    padding: 22px;
+    padding: 20px;
   }
 
   .project-modal-content {
-    padding: 28px 22px;
+    padding:
+      26px 20px 30px;
   }
 
   .project-modal-header {
     flex-direction: column;
 
-    gap: 18px;
+    gap: 16px;
 
-    margin-bottom: 40px;
+    margin-bottom: 37px;
   }
 
   .project-feature-grid,
@@ -694,7 +970,11 @@
   }
 
   .project-screenshot-mobile {
-    max-width: 300px;
+    max-width: 290px;
+  }
+
+  .project-detail-section {
+    margin-bottom: 40px;
   }
 
 }

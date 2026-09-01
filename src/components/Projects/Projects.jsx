@@ -4,128 +4,128 @@ import ProjectModal from './ProjectModal';
 
 const projects = [
   {
-  id: 1,
-  title: 'Wellness Cafe Point of Sale System',
-  type: 'mixed',
-  category: 'Freelance · Full-Stack',
-  status: 'In Development',
+    id: 1,
+    title: 'Wellness Cafe Point of Sale System',
+    type: 'mixed',
+    category: 'Freelance · Full-Stack',
+    status: 'In Development',
 
-  description:
-    'An integrated cafe POS and ordering system that connects counter sales, customer ordering, payment processing, kitchen operations, inventory, loyalty, reporting, and audit tracking within a single platform.',
+    description:
+      'An integrated cafe POS and ordering system that connects counter sales, customer ordering, payment processing, kitchen operations, inventory, loyalty, reporting, and audit tracking within a single platform.',
 
-  images: [
-    '/images/projects/project_1/overview_1.jpg',
-    '/images/projects/project_1/overview_2.jpg',
-  ],
+    images: [
+      '/images/projects/project_1/overview_1.jpg',
+      '/images/projects/project_1/overview_2.jpg',
+    ],
 
-  technologies: [
-    'Laravel',
-    'MySQL',
-    'JavaScript',
-  ],
+    technologies: [
+      'Laravel',
+      'MySQL',
+      'JavaScript',
+    ],
 
-  detailImage:
-    '/images/projects/project_1/detail_main.jpg',
+    detailImage:
+      '/images/projects/project_1/detail_main.jpg',
 
-  overview:
-    'An integrated cafe point-of-sale and ordering platform designed to connect counter sales, customer QR ordering, kitchen preparation, payment processing, inventory management, loyalty, reporting, and audit tracking within a single system.',
+    overview:
+      'An integrated cafe point-of-sale and ordering platform designed to connect counter sales, customer QR ordering, kitchen preparation, payment processing, inventory management, loyalty, reporting, and audit tracking within a single system.',
 
-  role:
-    'Full-Stack Developer',
+    role:
+      'Full-Stack Developer',
 
-  features: [
-    'POS counter ordering',
-    'Customer QR ordering',
-    'Kitchen Display System',
-    'Customer order-status tracking',
-    'Product and category management',
-    'Table management',
-    'Inventory auto-deduction',
-    'Purchase order management',
-    'Customer and loyalty management',
-    'Payment handling',
-    'Refund workflow',
-    'Reporting and analytics',
-    'Audit logging',
-  ],
+    features: [
+      'POS counter ordering',
+      'Customer QR ordering',
+      'Kitchen Display System',
+      'Customer order-status tracking',
+      'Product and category management',
+      'Table management',
+      'Inventory auto-deduction',
+      'Purchase order management',
+      'Customer and loyalty management',
+      'Payment handling',
+      'Refund workflow',
+      'Reporting and analytics',
+      'Audit logging',
+    ],
 
-  fullTechnologies: [
-    'Laravel 13',
-    'PHP',
-    'MySQL',
-    'JavaScript',
-    'HTML',
-    'CSS',
-    'Laravel Sanctum',
-    'Chart.js',
-  ],
+    fullTechnologies: [
+      'Laravel 13',
+      'PHP',
+      'MySQL',
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'Laravel Sanctum',
+      'Chart.js',
+    ],
 
-  workflow: [
-    'Customer places order',
-    'Pending payment',
-    'Payment confirmed',
-    'Kitchen queue',
-    'Preparing',
-    'Ready',
-    'Completed',
-  ],
+    workflow: [
+      'Customer places order',
+      'Pending payment',
+      'Payment confirmed',
+      'Kitchen queue',
+      'Preparing',
+      'Ready',
+      'Completed',
+    ],
 
-  screenshots: [
-    {
-      image:
-        '/images/projects/project_1/screenshots/pos.jpg',
-      label:
-        'Point of Sale',
-    },
-    {
-      image:
-        '/images/projects/project_1/screenshots/ordering.jpg',
-      label:
-        'Customer Ordering',
-    },
-    {
-      image:
-        '/images/projects/project_1/screenshots/kitchen.jpg',
-      label:
-        'Kitchen Display',
-    },
-    {
-      image:
-        '/images/projects/project_1/screenshots/order-status.jpg',
-      label:
-        'Order Status Tracking',
-    },
-    {
-      image:
-        '/images/projects/project_1/screenshots/inventory.jpg',
-      label:
-        'Inventory Management',
-    },
-    {
-      image:
-        '/images/projects/project_1/screenshots/reporting.jpg',
-      label:
-        'Reporting & Analytics',
-    },
-  ],
+    screenshots: [
+      {
+        image:
+          '/images/projects/project_1/screenshots/pos.jpg',
+        label:
+          'Point of Sale',
+      },
+      {
+        image:
+          '/images/projects/project_1/screenshots/ordering.jpg',
+        label:
+          'Customer Ordering',
+      },
+      {
+        image:
+          '/images/projects/project_1/screenshots/kitchen.jpg',
+        label:
+          'Kitchen Display',
+      },
+      {
+        image:
+          '/images/projects/project_1/screenshots/order-status.jpg',
+        label:
+          'Order Status Tracking',
+      },
+      {
+        image:
+          '/images/projects/project_1/screenshots/inventory.jpg',
+        label:
+          'Inventory Management',
+      },
+      {
+        image:
+          '/images/projects/project_1/screenshots/reporting.jpg',
+        label:
+          'Reporting & Analytics',
+      },
+    ],
 
-  highlights: [
-    'Role-based staff access',
-    'Separate payment and kitchen states',
-    'Payment-first kitchen workflow',
-    'Atomic inventory deduction',
-    'Live kitchen refresh',
-    'Customer order-status polling',
-    'Loyalty tier automation',
-    'Soft delete support',
-    'Audit trail for write operations',
-  ],
+    highlights: [
+      'Role-based staff access',
+      'Separate payment and kitchen states',
+      'Payment-first kitchen workflow',
+      'Atomic inventory deduction',
+      'Live kitchen refresh',
+      'Customer order-status polling',
+      'Loyalty tier automation',
+      'Soft delete support',
+      'Audit trail for write operations',
+    ],
 
-//   erd:
-//     '/images/projects/project_1/erd.jpg',
+    // erd:
+    //   '/images/projects/project_1/erd.jpg',
 
-//   github:
-//     'https://github.com/Agien99/wellness-cafe-api',
+    // github:
+    //   'https://github.com/Agien99/wellness-cafe-api',
   },
 
   {
@@ -207,8 +207,8 @@ const projects = [
       'Developed as part of the PuLaMi system environment',
     ],
 
-//    github:
-//      'https://github.com/Agien99/pulami_institute_profiling',
+    // github:
+    //   'https://github.com/Agien99/pulami_institute_profiling',
 
     liveDemo:
       'https://profiling.upsi.edu.my',
@@ -220,29 +220,29 @@ const projects = [
     type: 'mobile',
     category: 'Mobile Application',
     status: 'Completed',
-  
+
     description:
       'A cross-platform educational mobile application developed using Flutter, designed to support history learning through structured notes, quizzes, progress tracking, and revision activities.',
-  
+
     images: [
       '/images/projects/project_3/overview_1.jpg',
       '/images/projects/project_3/overview_2.jpg',
     ],
-  
+
     technologies: [
       'Flutter',
       'Dart',
     ],
-  
+
     detailImage:
       '/images/projects/project_3/detail_main.jpg',
-  
+
     overview:
       'Notaku Sejarah is an educational mobile application designed to support secondary school history learning through digital notes, chapter-based quizzes, quiz records, and result tracking. The application provides students with a structured way to review learning materials and test their understanding of selected topics.',
-  
+
     role:
       'Mobile Application Developer',
-  
+
     features: [
       'History notes by form and chapter',
       'Chapter-based quizzes',
@@ -252,12 +252,12 @@ const projects = [
       'Structured revision content',
       'Credits and application information',
     ],
-  
+
     fullTechnologies: [
       'Flutter',
       'Dart',
     ],
-  
+
     workflow: [
       'Select learning section',
       'Choose form / chapter',
@@ -267,7 +267,7 @@ const projects = [
       'View result',
       'Review quiz history',
     ],
-  
+
     screenshots: [
       {
         image:
@@ -312,7 +312,7 @@ const projects = [
           'Tingkatan 1 Note Sample',
       },
     ],
-  
+
     highlights: [
       'Cross-platform application built using Flutter',
       'Structured separation between notes and quizzes',
@@ -321,62 +321,91 @@ const projects = [
       'Quiz attempt history',
       'Reusable Flutter screen structure',
     ],
-  
-//    github:
-//      'https://github.com/Agien99/Notaku_Sejarah',
-  },
 
-//   {
-//     id: 4,
-//     title: 'Project Four',
-//     type: 'web',
-//     category: 'Academic Project',
-//     status: 'In Development',
-//     description:
-//       'A short overview of the project, its purpose, and the problem it was designed to solve.',
-//     images: [
-//       '/images/projects/project_4/overview_1.jpg',
-//       '/images/projects/project_4/overview_2.jpg',
-//     ],
-//     technologies: [
-//       'Technology',
-//       'Database',
-//       'Framework',
-//     ],
-//   },
+    // github:
+    //   'https://github.com/Agien99/Notaku_Sejarah',
+  },
 ];
 
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
+
+  const getStatusClass = (status) => {
+    if (
+      status === 'Completed' ||
+      status === 'Live'
+    ) {
+      return 'project-status-success';
+    }
+
+    return 'project-status-development';
+  };
+
   return (
-    <section id="projects" className="projects">
+    <section
+      id="projects"
+      className="projects"
+    >
       <div className="projects-container">
 
-        <div className="projects-heading">
-          <p className="section-label">
-            Projects
-          </p>
+        {/* HEADER */}
 
-          <h2>
-            Selected work
-            <span> and systems I've built.</span>
-          </h2>
+        <div className="projects-header">
 
-          <p className="projects-intro">
-            A selection of software projects that demonstrate my experience
-            in full-stack development, mobile application development,
-            system design, business workflows, databases, and application
-            development.
-          </p>
+          <div className="projects-section-label">
+            <span className="projects-label-icon">
+              {'{ }'}
+            </span>
+
+            <span>
+              Featured Projects
+            </span>
+          </div>
+
+          <div className="projects-header-row">
+
+            <div>
+              <h2>
+                Selected work
+                <span>
+                  {' '}and systems I've built.
+                </span>
+              </h2>
+
+              <p className="projects-intro">
+                A selection of software projects demonstrating
+                full-stack development, mobile development,
+                business workflows, databases, system design,
+                and practical application development.
+              </p>
+            </div>
+
+            <div className="projects-count">
+              <strong>
+                {String(projects.length).padStart(2, '0')}
+              </strong>
+
+              <span>
+                Featured Projects
+              </span>
+            </div>
+
+          </div>
+
         </div>
+
+
+        {/* PROJECT GRID */}
 
         <div className="projects-grid">
 
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <article
               className="project-card"
               key={project.id}
             >
+
+              {/* PREVIEW */}
 
               <div
                 className={`project-preview project-preview-${project.type}`}
@@ -384,15 +413,21 @@ function Projects() {
                 role="button"
                 tabIndex={0}
                 onKeyDown={(event) => {
-                    if (event.key === 'Enter' || event.key === ' ') {
+                  if (
+                    event.key === 'Enter' ||
+                    event.key === ' '
+                  ) {
                     setSelectedProject(project);
-                    }
+                  }
                 }}
               >
 
-                {/* =========================
-                    WEB PROJECT
-                ========================= */}
+                <div className="project-index">
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+
+
+                {/* WEB */}
 
                 {project.type === 'web' && (
                   <>
@@ -412,9 +447,8 @@ function Projects() {
                   </>
                 )}
 
-                {/* =========================
-                    MOBILE PROJECT
-                ========================= */}
+
+                {/* MOBILE */}
 
                 {project.type === 'mobile' && (
                   <div className="mobile-images">
@@ -436,10 +470,8 @@ function Projects() {
                   </div>
                 )}
 
-                {/* =========================
-                    MIXED PROJECT
-                    LANDSCAPE + PORTRAIT
-                ========================= */}
+
+                {/* MIXED */}
 
                 {project.type === 'mixed' && (
                   <div className="mixed-images">
@@ -461,25 +493,27 @@ function Projects() {
                   </div>
                 )}
 
-                {/* =========================
-                    HOVER OVERLAY
-                ========================= */}
+
+                {/* HOVER */}
 
                 <div className="project-preview-overlay">
-                  <span>
-                    Explore Project
-                  </span>
 
-                  <span className="project-preview-arrow">
-                    ↗
-                  </span>
+                  <div className="project-preview-action">
+                    <span>
+                      View Project
+                    </span>
+
+                    <span>
+                      ↗
+                    </span>
+                  </div>
+
                 </div>
 
               </div>
 
-              {/* =========================
-                  PROJECT CONTENT
-              ========================= */}
+
+              {/* CONTENT */}
 
               <div className="project-content">
 
@@ -490,11 +524,9 @@ function Projects() {
                   </span>
 
                   <span
-                    className={`project-status ${
-                      project.status === 'Completed'
-                        ? 'project-status-completed'
-                        : 'project-status-development'
-                    }`}
+                    className={`project-status ${getStatusClass(
+                      project.status
+                    )}`}
                   >
                     <span className="status-dot"></span>
 
@@ -511,22 +543,37 @@ function Projects() {
                   {project.description}
                 </p>
 
-                <div className="project-technologies">
-                  {project.technologies.map((technology) => (
-                    <span key={technology}>
-                      {technology}
-                    </span>
-                  ))}
-                </div>
+                <div className="project-card-bottom">
 
-                <button
-                  type="button"
-                  className="project-explore"
-                  onClick={() => setSelectedProject(project)}
+                  <div className="project-technologies">
+
+                    {project.technologies.map(
+                      (technology) => (
+                        <span key={technology}>
+                          {technology}
+                        </span>
+                      )
+                    )}
+
+                  </div>
+
+                  <button
+                    type="button"
+                    className="project-explore"
+                    onClick={() =>
+                      setSelectedProject(project)
+                    }
                   >
-                  Explore Project
-                  <span>→</span>
-                </button>
+                    <span>
+                      Explore
+                    </span>
+
+                    <span className="project-explore-arrow">
+                      →
+                    </span>
+                  </button>
+
+                </div>
 
               </div>
 
@@ -537,10 +584,15 @@ function Projects() {
 
       </div>
 
+
+      {/* MODAL */}
+
       {selectedProject && (
         <ProjectModal
-            project={selectedProject}
-            onClose={() => setSelectedProject(null)}
+          project={selectedProject}
+          onClose={() =>
+            setSelectedProject(null)
+          }
         />
       )}
 
