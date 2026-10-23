@@ -404,7 +404,7 @@ export const projects = [
       "Sembast local records on Android and Web",
       "Automated formatting, analysis and build checks"
     ],
-    "liveDemo": "https://agien99.github.io/notaku-sejarah-v2/"
+    // "liveDemo": "https://agien99.github.io/notaku-sejarah-v2/"
   },
   {
     "id": 5,
@@ -518,6 +518,6 @@ export const projects = [
       "Decimal-based earnings calculations",
       "Responsive rider workflow and dashboard"
     ],
-    "liveDemo": "https://agien99.github.io/riderjob/"
+    // "liveDemo": "https://agien99.github.io/riderjob/"
   }
 ];
