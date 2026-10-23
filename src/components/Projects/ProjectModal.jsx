@@ -126,17 +126,24 @@ function ProjectModal({ project, onClose }) {
 
           {project.screenshots.length > 0 && (
             <section className="project-detail-section">
-              <SectionHeading index={6}>Screen-by-Screen Walkthrough</SectionHeading>
-              <p className="project-flow-intro">Application screens are paired with an explanation of their role in the end-to-end process.</p>
+              <SectionHeading index={6}>Screen-by-Screen Walkthrough · {project.screenshots.length} Screens</SectionHeading>
+              <p className="project-flow-intro">Each screen illustrates an application feature and its role in the workflow. Select an image to view it at full size.</p>
               <div className={`project-case-walkthrough ${project.type === 'mobile' ? 'project-case-walkthrough-mobile' : ''}`}>
                 {project.screenshots.map((screen, index) => (
                   <article className="project-case-screen" key={`${project.id}-${screen.image}`}>
-                    <div className={`project-case-screen-image ${project.type === 'mobile' ? 'project-case-screen-image-mobile' : ''}`}>
+                    <a
+                      href={screen.image}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`project-case-screen-image ${project.type === 'mobile' ? 'project-case-screen-image-mobile' : ''}`}
+                      aria-label={`Open full-size image: ${project.title} — ${screen.label}`}
+                    >
                       <img src={screen.image} alt={`${project.title}: ${screen.label}`} loading="lazy" />
-                    </div>
+                      <span className="project-case-zoom-hint">View full size ↗</span>
+                    </a>
                     <div className="project-case-screen-copy">
                       <div className="project-case-screen-overline">
-                        <span>STEP {String(index + 1).padStart(2, '0')}</span>
+                        <span>SCREEN {String(index + 1).padStart(2, '0')}</span>
                         {screen.sample && <span className="project-case-sample-badge">Sample data · Source-guided UI</span>}
                       </div>
                       <h4>{screen.label}</h4>

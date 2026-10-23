@@ -185,3 +185,18 @@
 @media(prefers-reduced-motion:reduce) {
   .project-preview, .project-explore, .project-card { transition: none; }
 }
+
+/* Open source-guided screens at full resolution, preserving portrait/landscape previews. */
+.project-case-screen-image { position: relative; text-decoration: none; cursor: zoom-in; }
+.project-case-screen-image:focus-visible { outline: 2px solid #79c0ff; outline-offset: -2px; }
+.project-case-zoom-hint {
+  position: absolute; right: 11px; bottom: 11px; z-index: 2;
+  border: 1px solid rgba(88,166,255,.38); border-radius: 5px;
+  padding: 6px 9px; background: rgba(4,11,20,.92);
+  color: #dce9fc; font-size: .65rem; font-weight: 700;
+  opacity: 0; transform: translateY(3px);
+  transition: opacity .2s ease, transform .2s ease;
+}
+.project-case-screen-image:hover .project-case-zoom-hint,
+.project-case-screen-image:focus-visible .project-case-zoom-hint { opacity: 1; transform: translateY(0); }
+@media(hover:none) { .project-case-zoom-hint { opacity: 1; transform: none; } }

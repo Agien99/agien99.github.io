@@ -339,15 +339,57 @@ export const projects = [
         "sample": true
       },
       {
+        "label": "Select a History Form",
+        "image": "/images/projects/project_4/screenshots/notes.png",
+        "description": "Students choose Tingkatan 1–5 from the local note catalogue. The list displays curriculum themes and available chapters.",
+        "sample": true
+      },
+      {
+        "label": "Browse Chapters",
+        "image": "/images/projects/project_4/screenshots/chapters.png",
+        "description": "Selecting Tingkatan 2 displays its KSSM chapters. Learners open a chapter without connecting to a hosted database.",
+        "sample": true
+      },
+      {
+        "label": "Read Chapter Notes",
+        "image": "/images/projects/project_4/screenshots/reader.png",
+        "description": "The reader loads bundled JSON note content, including the overview, keywords, chapter sections and key facts; this sample uses actual chapter text.",
+        "sample": true
+      },
+      {
+        "label": "Choose Quiz Level",
+        "image": "/images/projects/project_4/screenshots/quiz-select.png",
+        "description": "Students select a form and chapter before attempting a 15-question quiz. The question bank is supplied with the application.",
+        "sample": true
+      },
+      {
         "label": "Quiz Attempt",
         "image": "/images/projects/project_4/screenshots/quiz.png",
         "description": "A sample quiz card shows question progress and multiple-choice selection. The question text is illustrative, not a verified bank question.",
         "sample": true
       },
       {
+        "label": "Quiz Results & Answer Review",
+        "image": "/images/projects/project_4/screenshots/result.png",
+        "description": "After submitting all questions, the app calculates a score and offers per-question review. The score and answer in this image are illustrative.",
+        "sample": true
+      },
+      {
         "label": "Records & Statistics",
         "image": "/images/projects/project_4/screenshots/records.png",
         "description": "Sample local attempts demonstrate the best-score and average-score presentation. Actual history stays on the user's device or browser.",
+        "sample": true
+      },
+      {
+        "label": "Review a Previous Attempt",
+        "image": "/images/projects/project_4/screenshots/record-detail.png",
+        "description": "Recorded results include score, duration and selected/correct answers with explanations. Fictional scores illustrate device-local history.",
+        "sample": true
+      },
+      {
+        "label": "Settings & Local Data",
+        "image": "/images/projects/project_4/screenshots/settings.png",
+        "description": "Users can adjust learning preferences, manage stored quiz records, and view application and curriculum information.",
         "sample": true
       }
     ],
@@ -429,9 +471,39 @@ export const projects = [
         "sample": true
       },
       {
+        "label": "Active Rider Session",
+        "image": "/images/projects/project_5/screenshots/active.png",
+        "description": "The active-session screen tracks duration and starting mileage. The rider enters ending mileage, orders, gross earnings and expenses to complete a shift.",
+        "sample": true
+      },
+      {
+        "label": "Completed Session Summary",
+        "image": "/images/projects/project_5/screenshots/summary.png",
+        "description": "The completed session shows net income, orders, distance, duration and expense breakdown using fictional demonstration amounts.",
+        "sample": true
+      },
+      {
+        "label": "Filter Session History",
+        "image": "/images/projects/project_5/screenshots/history.png",
+        "description": "Recorded sessions can be browsed and filtered by platform, date and notes. Each example record represents sample data, not an actual rider.",
+        "sample": true
+      },
+      {
+        "label": "Edit Recorded Session",
+        "image": "/images/projects/project_5/screenshots/edit.png",
+        "description": "The existing session-detail workflow provides editable mileage, orders, income, costs and notes; updated values are recalculated.",
+        "sample": true
+      },
+      {
         "label": "Rider Analytics",
         "image": "/images/projects/project_5/screenshots/analytics.png",
         "description": "Sample earnings trends and efficiency calculations demonstrate how completed sessions can be compared by period.",
+        "sample": true
+      },
+      {
+        "label": "Rider Account Profile",
+        "image": "/images/projects/project_5/screenshots/profile.png",
+        "description": "The profile displays account identity and status. The illustrated name and email belong to a fictional demonstration rider.",
         "sample": true
       }
     ],
