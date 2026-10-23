@@ -1,0 +1,187 @@
+/* Additional case-study presentation layered over the existing portfolio styling. */
+.project-preview {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+}
+.project-preview:focus-visible,
+.project-explore:focus-visible,
+.project-modal-close:focus-visible,
+.project-modal-button:focus-visible {
+  outline: 2px solid #79c0ff;
+  outline-offset: 3px;
+}
+.project-preview-sample-tag {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 6;
+  padding: 7px 10px;
+  border: 1px solid rgba(88,166,255,.4);
+  border-radius: 7px;
+  background: rgba(7,15,27,.9);
+  color: #b7d8fb;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+.project-case-summary {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+.project-case-summary-item {
+  padding: 18px;
+  border: 1px solid #203047;
+  border-radius: 10px;
+  background: linear-gradient(145deg,#0d192a,#081320);
+}
+.project-case-summary-item strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: .85rem;
+  letter-spacing: .2px;
+  color: #79c0ff;
+}
+.project-case-summary-item p,
+.project-flow-intro,
+.project-code-note {
+  margin: 0;
+  color: #9aa9bd;
+  font-size: .83rem;
+  line-height: 1.72;
+}
+.project-flow-intro { margin: -4px 0 20px; max-width: 820px; }
+.project-workflow-wrap {
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 10px;
+}
+.project-workflow-wrap .workflow-step {
+  flex: 1 1 125px;
+  min-width: 110px;
+}
+.project-case-walkthrough {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 17px;
+}
+.project-case-screen {
+  overflow: hidden;
+  border: 1px solid #203047;
+  border-radius: 11px;
+  background: #091523;
+}
+.project-case-screen-image {
+  min-height: 180px;
+  background: #050d17;
+  border-bottom: 1px solid #203047;
+}
+.project-case-screen-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+}
+.project-case-screen-image-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  background: radial-gradient(circle at 50% 40%,rgba(47,129,247,.1),transparent 72%),#070e17;
+}
+.project-case-screen-image-mobile img {
+  width: min(100%,255px);
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  aspect-ratio: auto;
+  border-radius: 10px;
+  box-shadow: 0 14px 32px rgba(0,0,0,.24);
+}
+.project-case-screen-copy { padding: 16px 17px 19px; }
+.project-case-screen-overline {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  color: #79c0ff;
+  font-size: .61rem;
+  font-weight: 700;
+  letter-spacing: .8px;
+}
+.project-case-sample-badge {
+  padding: 4px 7px;
+  border-radius: 4px;
+  background: #182c43;
+  color: #adcae8;
+  font-size: .57rem;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+.project-case-screen h4 { margin: 0 0 7px; color: #f0f6fc; font-size: .97rem; }
+.project-case-screen-copy p { margin: 0; color: #93a1b4; font-size: .8rem; line-height: 1.64; }
+.project-code-panel {
+  overflow: hidden;
+  border: 1px solid #284060;
+  border-radius: 10px;
+  background: #040913;
+}
+.project-code-header {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #203047;
+  background: #0d182a;
+  color: #9fb3ca;
+  font: 600 .68rem/1.5 'Courier New',monospace;
+  overflow-wrap: anywhere;
+}
+.project-code-header span:last-child { flex-shrink: 0; color: #58a6ff; }
+.project-code-panel pre {
+  overflow: auto;
+  max-height: 380px;
+  margin: 0;
+  padding: 18px;
+  color: #c9e1f8;
+  font: .8rem/1.72 'Courier New',monospace;
+  tab-size: 2;
+}
+.project-code-note { margin-top: 15px; }
+.project-case-footer {
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 22px;
+  border-top: 1px solid #203047;
+}
+.project-case-footer > div { display: flex; gap: 8px; flex-direction: column; }
+.project-case-footer > div > span { color: #77879a; font-size: .65rem; text-transform: uppercase; letter-spacing: 1px; }
+.project-case-footer strong { color: #d29922; font-size: .85rem; }
+.project-case-footer .project-case-status-ok { color: #3fb950; }
+@media(max-width:900px) {
+  .project-case-summary { grid-template-columns: 1fr; }
+  .project-case-walkthrough { grid-template-columns: 1fr; }
+  .project-case-screen-image img { aspect-ratio: 16 / 9; }
+}
+@media(max-width:650px) {
+  .project-case-screen-image { min-height: 0; }
+  .project-case-screen-copy { padding: 16px; }
+  .project-workflow-wrap { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .project-workflow-wrap .workflow-step { min-width: 0; }
+  .project-code-panel pre { padding: 13px; font-size: .72rem; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .project-preview, .project-explore, .project-card { transition: none; }
+}

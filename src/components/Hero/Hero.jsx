@@ -147,11 +147,11 @@ function Hero() {
               </span>
 
               <strong>
-                3+ Completed
+                5 Featured
               </strong>
 
               <small>
-                Web & Mobile Projects
+                Selected Case Studies
               </small>
             </div>
 
